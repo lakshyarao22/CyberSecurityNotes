@@ -93,7 +93,7 @@ These 3 things should be balanced
 * **Hacktivists** :- It is the act of hacking, or breaking into a computer system, for politically or socially motivated purposes.
   
 # Hacking Phases
-1. Recon
+1. [Recon](FootPrinting%20and%20Recon.md)
    * Passive
    * Active
 2. Scanning
