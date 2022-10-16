@@ -93,3 +93,19 @@ These 3 things should be balanced
 * **Hacktivists** :- It is the act of hacking, or breaking into a computer system, for politically or socially motivated purposes.
   
 # Hacking Phases
+1. Recon
+   * Passive
+   * Active
+2. Scanning
+   * Find Ports and Services
+   * Find Hosts
+   * Find OS
+   * Find Vulnerabilities
+3. Gaining Access
+   * Privilege escalation
+   * Cracking passwords
+4. Maintaining Access
+   * Installing Malware and rootkits
+5. Covering Up tracks
+   * Modifying logs
+   * Hiding malware
