@@ -17,7 +17,7 @@
 
 use **-Info** to remove "info" from search output
 
-## Tools
+## Tools for Google Hacking
 
 [Google dorks List](https://securitytrails.com/blog/google-hacking-techniques)
 
@@ -67,3 +67,12 @@ Job postings can be used to determine the technologies of a organization.
 
 * [Monster.com](https://www.monster.com/)
 * [LinkedIn](https://www.linkedin.com/jobs/)
+
+# Protection Against Recon
+* Find wrong and make policy and procedure
+* Training and Awareness
+* [Who.is](https://who.is/) privacy services
+* [Encryption](https://www.techtarget.com/searchsecurity/definition/encryption#:~:text=Encryption%20is%20the%20method%20by,encrypted%20data%20is%20called%20ciphertext.)
+* Be paranoid on social Media
+* Disable location services
+* Sanitize job listings
