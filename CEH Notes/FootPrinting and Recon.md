@@ -35,12 +35,12 @@ Similarly we can use Censys to find hosts, IP Addess, etc.
 It is the practice of checking subdomains from list of common domains One-By-One.
 
 ``` 
-        __________________ registered Domain
+        ____ Registered Domain
        v
 docs.google.com
   ^          ^
-  |          |__________________________Top-Level Domain
-  |______________________ Sub Domain
+  |          |______Top-Level Domain
+  |__Sub Domain
 ```
 
 ### Tools
@@ -76,3 +76,10 @@ Job postings can be used to determine the technologies of a organization.
 * Be paranoid on social Media
 * Disable location services
 * Sanitize job listings
+## Tools
+* [Freenet](https://freenetproject.org/index.html)
+* [RetroShare](https://retroshare.cc/)
+* [Tor Browser](https://www.torproject.org/download/)
+* [Tails OS](https://tails.boum.org/)
+* [Hidden WiKi](https://thehiddenwiki.org/)
+

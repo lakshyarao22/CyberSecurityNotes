@@ -34,14 +34,14 @@ Reduce Accessibility
 **Security Triangle**
 
 ```
-                             Security
-                                 A
-                                / \
-                               /   \
-                              /  O  \
-                             /       \
-                            /_________\
-              Functionality             Usability
+                 Security
+                     A
+                    / \
+                   /   \
+                  /  O  \
+                 /       \
+                /_________\
+  Functionality             Usability
 ```
 These 3 things should be balanced
 
@@ -95,7 +95,9 @@ These 3 things should be balanced
 # Hacking Phases
 1. [Recon](FootPrinting%20and%20Recon.md)
    * Passive
+     * [Social Engineering](Social%20Engineering.md)
    * Active
+      * [Social Engineering](Social%20Engineering.md)
 2. Scanning
    * Find Ports and Services
    * Find Hosts
