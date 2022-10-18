@@ -7,9 +7,9 @@
 ### What can be stealed?
 * System Information
 * Username and passwords
-* Dns and firewall
-* Organisational Information
-* Vulnearability identification
+* DNS and firewall
+* Organizational Information
+* Vulnerability identification
 
 ## Google Dorks
 
@@ -27,9 +27,9 @@ use **-Info** to remove "info" from search output
 
 # [Shodan](https://www.shodan.io/) And [Censys](https://search.censys.io/)
 
-Shodan is used to find open ports vulnearabilities etc. on a IP or domain.
+Shodan is used to find open ports vulnerabilities etc. on an IP or domain.
 
-Similarly we can use Censys to find hosts, IP Addess, etc.
+Similarly, we can use Censys to find hosts, IP Address, etc.
 
 # Sub-Domain Enumeration
 It is the practice of checking subdomains from list of common domains One-By-One.
@@ -46,7 +46,7 @@ docs.google.com
 ### Tools
 
 * [Netcraft](https://www.netcraft.com/tools/)
-* [Sublist3r](https://github.com/aboul3la/Sublist3r) for subdomain enumuration
+* [Sublist3r](https://github.com/aboul3la/Sublist3r) for subdomain enumeration
 * [ARIN](https://www.arin.net/) used to get info for 
 * [RDAP](https://www.icann.org/rdap)
 * [TraceRoute](https://www.fortinet.com/resources/cyberglossary/traceroutes) to see path of traffic.
