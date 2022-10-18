@@ -96,4 +96,26 @@ Hacker steals personally identified information and impersonates you.
 
 ## Motives
 * Money
-* 
+* Framing for Crime
+* Hiding
+  
+## ID Targets
+* Driver's license
+* Government ID
+* banking Info
+* Insurance Info 
+* Tax Info
+* Children's Personal Info
+
+## Getting Info
+* PickPocketing
+* Online Info
+* Hack into computer or phone
+* Paper or electronics files
+* [OSINT](https://osintframework.com/)
+* Key Logger
+  
+## Attack Queues
+* Statements
+* Credit Reports
+* Interest Communications
