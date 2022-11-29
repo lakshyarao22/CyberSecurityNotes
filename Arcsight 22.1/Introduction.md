@@ -109,13 +109,13 @@ allow-worker-on-master: true
 k9s
 ```
 
-Display status of kubernetes
+* Display status of kubernetes
 
 ``` bash
 cd /opt/arcsight/kubernetes/bin
 ./kube-status.sh
 ```
-
+* **FIPS MODE** is only used in North America
 ## User Management
 
 **RESET**  User Password
