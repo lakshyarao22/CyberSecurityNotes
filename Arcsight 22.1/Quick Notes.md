@@ -33,3 +33,5 @@ Used
 what is minIO?
 
 what is Zoo keeper?
+
+i have mistakenly added master1 insted of master on th-CEF
