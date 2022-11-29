@@ -45,6 +45,7 @@ It can send logs in 3 languages
   6. Check yaml file for configuration
 
   ``` bash
+    cd /opt/installers
    ./arcsight-install --cmd precheck
    ```
 
@@ -77,7 +78,13 @@ It can send logs in 3 languages
 ``` bash
   ./arcsight-install --cmd cdf
 ```
+10. Enable Databse on ITOM Portal => Fusion
 
+11. To run post install script
+
+  ``` bash
+  ./arcsight-install --cmd postinstall
+  ```
 ## Notes
 
 * namenode-inteligence can only be used on Large Node.
@@ -105,6 +112,7 @@ k9s
 Display status of kubernetes
 
 ``` bash
+cd /opt/arcsight/kubernetes/bin
 ./kube-status.sh
 ```
 
@@ -121,4 +129,12 @@ k9s
 ## delete single-sign-on 
 ```
 
-delete these files to delete database of vertica
+* Delete these files to delete database of vertica
+
+* Access ArcSight Documntation [Here](https://www.microfocus.com/documentation/arcsight/arcsight-platform-22.1/pdfdoc/arcsight-admin-guide-22.1/arcsight-admin-guide-22.1.pdf)
+
+According to Documnetation
+``` bash
+sh /idmtools/idm-installer-tools/idm.sh databaseUser unlockUser -org Provider -name admin
+sh /idmtools/idm-installer-tools/idm.sh databaseUser resetPassword -org Provider -name "admin" -plainPwd "NEWPASSWORD"
+```
