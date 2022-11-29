@@ -97,7 +97,7 @@ It can send logs in 3 languages
 /opt/installer/installers/cdf/install.property
  ```
 
-* we can use master node as worker if we set
+* we can use master node as worker if we set on [config](./example-config.yaml)
 
 ``` yaml
 allow-worker-on-master: true
