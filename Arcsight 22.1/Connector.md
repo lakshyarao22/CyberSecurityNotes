@@ -41,7 +41,7 @@ cd /opt/arcsight/kubernetes/scripts/
 ## Copy Certificate and save as .crt file
                 OR
 ./cdf-updateRE.sh > /opt/master1.crt # Generate Certificate and paste it into master1.crt
-```
+``` note
 Backup certificate  file
 
 ``` powershell 
@@ -93,8 +93,20 @@ C:\arcsight\smartConnector\th-AVRO\current\jre\lib\security\cacerts
 * Add Windows or connector hostname
 * Select Type as software Connector
 * use port 9001,9002
-* Give Credentials and import Cretificates.
+* Give Credentials and import Certificates.
 * Finally Click **ADD**
 
 ---
 Note:- Connectors should be running on host machine.
+
+---
+
+## If We want to create a ESM with filtered Logs
+
+we will create a new topic on TH to filter the logs and get it on ESM.
+
+Topics are a sort of pipeline with which we can get logs in a specific format and specific filter.
+
+## How we make sure if ESM is sending corelated logs to TH we will not recive them back to ESM
+
+By Making a New Topic.

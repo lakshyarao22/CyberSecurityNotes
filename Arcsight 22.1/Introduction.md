@@ -133,7 +133,7 @@ k9s
 
 * Access ArcSight Documntation [Here](https://www.microfocus.com/documentation/arcsight/arcsight-platform-22.1/pdfdoc/arcsight-admin-guide-22.1/arcsight-admin-guide-22.1.pdf)
 
-According to Documnetation
+According to Documnetation how to reset fusion password
 ``` bash
 sh /idmtools/idm-installer-tools/idm.sh databaseUser unlockUser -org Provider -name admin
 sh /idmtools/idm-installer-tools/idm.sh databaseUser resetPassword -org Provider -name "admin" -plainPwd "NEWPASSWORD"
