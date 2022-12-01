@@ -1,14 +1,23 @@
 # Social Engineering
+
 ## Eavesdropping
+
 Listening to conversation passively
+
 ## Shoulder Surfing
+
 Watching Pins, Passwords or Messages over the shoulder (Passively)
+
 ## Dumpster Diving
+
 Finding useful information in trash or private documents which are not destroyed properly
-## Impersonation 
+
+## Impersonation
+
 It is when someone pretends to be another person to gain access or information
 
 # Common Targets
+
 * Help desk / Tech Support
 * Admins
 * C-Level
@@ -28,7 +37,6 @@ It is when someone pretends to be another person to gain access or information
 * Social Acceptance
 * Helpfulness
 
-
 ## Phases
 
 * Research the organization
@@ -37,7 +45,9 @@ It is when someone pretends to be another person to gain access or information
 * Exploit the relationship
   
 # Types
+
 ## Humans
+
 * Piggybacking
 * Tailgating
 * Dumpster Diving
@@ -48,17 +58,19 @@ It is when someone pretends to be another person to gain access or information
 * Shoulder Surfing
 
 ## Computer
+
 * Phishing
 * Spam
 * Messenger
 
 ## Mobile
+
 * SMiShing
 * Spimming
 * Fake / Malicious Apps
 
-
 ## Tools
+
 * [SE Tool Kit](https://github.com/trustedsec/social-engineer-toolkit) is used to make phishing websites
 * [ShellPhish](https://github.com/suljot/shellphish)
   
@@ -79,12 +91,14 @@ Someone who is trusted inside an organization who has inside access.
 * Compromised Insider
 
 ## Motives
+
 * Blackmail
 * Money
 * Competitor
 * Hacktivist
 
 ## Indicators
+
 * Traffic
 * Emails
 * Multiple login from different devices
@@ -93,22 +107,26 @@ Someone who is trusted inside an organization who has inside access.
 * possession of something sensitive
 
 # Identity Theft
+
 Hacker steals personally identified information and impersonates you.
 
 ## Motives
+
 * Money
 * Framing for Crime
 * Hiding
   
 ## ID Targets
+
 * Driver's license
 * Government ID
 * banking Info
-* Insurance Info 
+* Insurance Info
 * Tax Info
 * Children's Personal Info
 
 ## Getting Info
+
 * PickPocketing
 * Online Info
 * Hack into computer or phone
@@ -117,6 +135,7 @@ Hacker steals personally identified information and impersonates you.
 * Key Logger
   
 ## Attack Queues
+
 * Statements
 * Credit Reports
 * Interest Communications
