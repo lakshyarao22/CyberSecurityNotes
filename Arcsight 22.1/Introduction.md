@@ -78,6 +78,7 @@ It can send logs in 3 languages
 ``` bash
   ./arcsight-install --cmd cdf
 ```
+
 10. Enable Databse on ITOM Portal => Fusion
 
 11. To run post install script
@@ -85,6 +86,7 @@ It can send logs in 3 languages
   ``` bash
   ./arcsight-install --cmd postinstall
   ```
+
 ## Notes
 
 * namenode-inteligence can only be used on Large Node.
@@ -115,7 +117,9 @@ k9s
 cd /opt/arcsight/kubernetes/bin
 ./kube-status.sh
 ```
+
 * **FIPS MODE** is only used in North America
+
 ## User Management
 
 **RESET**  User Password
@@ -134,6 +138,7 @@ k9s
 * Access ArcSight Documntation [Here](https://www.microfocus.com/documentation/arcsight/arcsight-platform-22.1/pdfdoc/arcsight-admin-guide-22.1/arcsight-admin-guide-22.1.pdf)
 
 According to Documnetation how to reset fusion password
+
 ``` bash
 sh /idmtools/idm-installer-tools/idm.sh databaseUser unlockUser -org Provider -name admin
 sh /idmtools/idm-installer-tools/idm.sh databaseUser resetPassword -org Provider -name "admin" -plainPwd "NEWPASSWORD"
