@@ -1,29 +1,29 @@
 # Social Engineering
 
-## Eavesdropping
+### Eavesdropping
 
 Listening to conversation passively
 
-## Shoulder Surfing
+### Shoulder Surfing
 
 Watching Pins, Passwords or Messages over the shoulder (Passively)
 
-## Dumpster Diving
+### Dumpster Diving
 
 Finding useful information in trash or private documents which are not destroyed properly
 
-## Impersonation
+### Impersonation
 
 It is when someone pretends to be another person to gain access or information
 
-# Common Targets
+## Common Targets
 
 * Help desk / Tech Support
 * Admins
 * C-Level
 * **Everyone!**
 
-## Tactic
+### Tactic
 
 * Framing
 * Pretext
@@ -37,16 +37,16 @@ It is when someone pretends to be another person to gain access or information
 * Social Acceptance
 * Helpfulness
 
-## Phases
+### Phases
 
 * Research the organization
 * Target Selection
 * Establish and develop a relationship
 * Exploit the relationship
   
-# Types
+## Types
 
-## Humans
+### Humans
 
 * Piggybacking
 * Tailgating
@@ -57,24 +57,24 @@ It is when someone pretends to be another person to gain access or information
 * Eavesdropping
 * Shoulder Surfing
 
-## Computer
+### Computer
 
 * Phishing
 * Spam
 * Messenger
 
-## Mobile
+### Mobile
 
 * SMiShing
 * Spimming
 * Fake / Malicious Apps
 
-## Tools
+### Tools
 
 * [SE Tool Kit](https://github.com/trustedsec/social-engineer-toolkit) is used to make phishing websites
 * [ShellPhish](https://github.com/suljot/shellphish)
   
-# Insider Threat
+## Insider Threat
 
 Someone who is trusted inside an organization who has inside access.
 
@@ -82,7 +82,7 @@ Someone who is trusted inside an organization who has inside access.
 * Difficult to detect
 * Could be part of the job
 
-## Types
+### Types
 
 * Terminated Employee
 * Disgruntled Employee
@@ -90,14 +90,14 @@ Someone who is trusted inside an organization who has inside access.
 * Professional Insider
 * Compromised Insider
 
-## Motives
+### Motives
 
 * Blackmail
 * Money
 * Competitor
 * Hacktivist
 
-## Indicators
+### Indicators
 
 * Traffic
 * Emails
@@ -106,17 +106,17 @@ Someone who is trusted inside an organization who has inside access.
 * Behavioral Abnormality
 * possession of something sensitive
 
-# Identity Theft
+## Identity Theft
 
 Hacker steals personally identified information and impersonates you.
 
-## Motives
+### Motives
 
 * Money
 * Framing for Crime
 * Hiding
   
-## ID Targets
+### ID Targets
 
 * Driver's license
 * Government ID
@@ -125,7 +125,7 @@ Hacker steals personally identified information and impersonates you.
 * Tax Info
 * Children's Personal Info
 
-## Getting Info
+### Getting Info
 
 * PickPocketing
 * Online Info
@@ -134,7 +134,7 @@ Hacker steals personally identified information and impersonates you.
 * [OSINT](https://osintframework.com/)
 * Key Logger
   
-## Attack Queues
+### Attack Queues
 
 * Statements
 * Credit Reports
