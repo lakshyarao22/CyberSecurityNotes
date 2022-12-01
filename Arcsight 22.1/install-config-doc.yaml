@@ -1,0 +1,503 @@
+# --------------------------------------------------------------------------------------------#
+#     A R C S I G H T   P L A T F O R M   I N S T A L L A T I O N   C O N F I G   G U I D E   #
+# --------------------------------------------------------------------------------------------#
+#
+# This guide describes the format of the configuration file for the ArcSight Platform
+# installer and the options available. As an instructional guide, this file is not meant to be used
+# directly for performing an installation, but rather to provide you with the information
+# that you need to build a configuration file for installing the ArcSight Platform
+# environment that meets your needs.
+#
+# To help you get started in building your installation configuration file, we provide
+# example configuration files in the same directory as this file. The example files are
+# pre-configured for a variety of common scenarios. To use these example files, complete the
+# following steps:
+#  1. Make a copy of the example-install file that most closely matches your scenario
+#  2. Edit your copy of the example file to meet your exact needs
+#  3. Use the edited file as your customized configuration file when running the ArcSight
+#     Installation Tool
+# --------------------------------------------------------------------------------------------#
+
+
+# --------------------------------------------------------------------------------------------#
+cluster:
+  # CONFIGURING THE CLUSTER
+  #  In this section, you configure elements of the CDF Kubernetes cluster, which consists
+  #  of one or many Master and Worker Nodes.
+  #
+  #  Define the default minimum hardware size to be used when checking each Kubernetes
+  #  cluster Master and Worker Node prior to installation. You can override this default if
+  #  you want certain nodes to have a different minimum size depending on the workload that 
+  #  the node is expected to handle. To override, specify the node-size on the individual 
+  #  Master or Worker Nodes. For example, a Master Node might have a smaller minimum node
+  #  size than a Worker Node.
+
+  default-node-size: small
+   # Set default-node-size to one of the following values.  The default is small.
+   #     small:  4 CPUs, 16 GB of memory, 50 GB of storage
+   #     medium: 8 CPUs, 32 GB of memory, 100 GB of storage
+   #     large:  16 CPUs, 64 GB of memory, 256 GB of storage
+   # -----------------------------------------------------------------------------------------#
+
+  allow-worker-on-master: false
+   # While it is not recommended, especially for important or high workloads, you can enable
+   # running workloads on a Master Node.
+   #
+   # Specify 'true' or 'false'.  The default is false.
+   # -----------------------------------------------------------------------------------------#
+
+  virtual-ip-address: yourdomain-ha.yourenterprise.net
+   # The Virtual IP address is used to access the active Master Node when more than one
+   # Master nodes is deployed for high availability. Specify Fully Qualified Domain Name
+   # (FQDN) of your virtual IP. There is no default value.
+   #
+   # If the virtual-ip-address not set:
+   #    - Only the first Master Node will be installed, the remaining Master Nodes will be
+   #      ignored.
+   #    - The first Master Node defined in the master-nodes list (below) is the primary Master
+   #      Node and will be used as the external hostname.
+   # -----------------------------------------------------------------------------------------#
+
+  k8s-home: /opt/arcsight/kubernetes
+   # The Kubernetes home directory(k8s-home) property represetnts the path where you want to
+   # install the CDF components.
+   #
+   # The default path is /opt/arcsight/kubernetes.   
+   # -----------------------------------------------------------------------------------------#
+
+  docker-proxy: docker-proxy.yourproxy.net:8080
+   # The docker-proxy property specifies the FQDN:port as a proxy for the server that hosts
+   # the container registry. You must specify a value if any of the nodes in the CDF cluster
+   # cannot access the container registry directly. If the container registry is accessible
+   # from all cluster nodes, remove or do not specify a value for this property.
+   #
+   # By default, this value is not set.
+   # -----------------------------------------------------------------------------------------#
+
+  ignore-swap: false
+   # The ignore-swap property controls whether the CDF installer's precheck fails when it 
+   # finds that swap space is mounted. This is typically used when installing the Database on
+   # the same node where CDF will be installed because the Database requires swap space.
+   #
+   # The installer will automatically set this to true if it detects that the installer
+   # configuration places the Database and CDF components on the same node.
+   #
+   # Set to 'true' or 'false'. The default is false.
+   # -----------------------------------------------------------------------------------------#
+
+  pod-cidr: 172.16.0.0/16
+   # The pod-cidr property specifies the network address range of Kubernetes pods in
+   # Classless Inter-Domain Routing (CIDR) format. This range must not be used elsewhere in
+   # the network where this cluster is operating and must not overlap with the service-cidr 
+   # property setting (below).
+   #
+   # The default is 172.16.0.0/16.
+   # -----------------------------------------------------------------------------------------#
+
+  service-cidr: 172.17.17.0/24
+   # The service-cidr property specifies the network address range of the Kubernetes services
+   # in Classless Inter-Domain Routing (CIDR) format. This range must not be used elsewhere
+   # in the network where this cluster is operating and must not overlap with pod-cidr
+   # setting (above).
+   #
+   # The default is 172.17.17.0/24.
+   # -----------------------------------------------------------------------------------------#
+
+  docker-bip: 172.17.0.1/16
+  # The docker-bip property specifies the IP address and network mask for the docker0 bridge,
+  # using the standard Classless Inter-Domain Routing (CIDR) format.The first and last addresses
+  # on the subnet are always reserved for the network and broadcast IDs,
+  # so these two addresses cannot be used as the DOCKER_BIP.
+  #            For example:
+  #               if the IPv4 address of netmask is 255.255.0.0, the available addresses are from 172.17.0.1 to 172.17.255.254.
+  #               172.17.0.0/16 and 172.17.255.255/16 cannot be used for DOCKER_BIP.
+  #
+  # property setting (below)
+  # The default is 172.17.0.1/16.
+  # -----------------------------------------------------------------------------------------#
+
+
+  master-api-ssl-port: 8443
+   # The master-api-ssl-port property specifies the Kubernetes API server port when the 
+   # default 8443 port is already being used by another service on the same node. 
+   #
+   # The default is 8443.
+   # -----------------------------------------------------------------------------------------#
+
+  load-balancer-host: yourdomain-load-balancer.yourenterprise.net
+   # The load-balancer-host property specifies the FQDN of the load balancer host. There is
+   # no default value, so no load balancer will be enabled unless you specify a value.
+   # -----------------------------------------------------------------------------------------#
+
+  enable-fips: false
+   # The enable-fips property controls whether to enable CDF to operate in FIPS 140 mode. This
+   # property does not set all components to run in FIPS 140 mode. Rather, you must specify
+   # additional FIPS mode options to operate the other components in FIPS 140 mode. Please
+   # see the Administrator's Guide for complete information on FIPS 140 mode.
+   #
+   # Specify 'true' or 'false'. The default is false.
+   # -----------------------------------------------------------------------------------------#
+
+  master-nodes:
+    - hostname: yourdomain-masternode1.yourenterprise.net
+      username: root
+    - hostname: yourdomain-masternode2.yourenterprise.net
+      username: root
+    - hostname: yourdomain-masternode3.yourenterprise.net
+      username: root
+   # The master-nodes properties define the FQDN list of Master Nodes in the cluster. The
+   # first Master Node in the list is the Primary, or Initial, Master Node from which all
+   # other processing will emanate. You must specify at least one Master Node. For high 
+   # availability, we recommend 3. Valid values are 1 and 3.
+   #   NOTES: 
+   #     - If you did not specify a value for the virtual-ip-address property (above), the 
+   #       Primary Master Node also is used as the external host name. 
+   #     - If you want only one Master Node, remove the unnecessary 'hostname/username'
+   #       pairs from this list.
+   #
+   #  hostname 
+   #    Specifies the FQDN of the Master Node.
+   #
+   #  username 
+   #    Specifies  which user should be used to connect to the node using ssh and perform the
+   #    installation. When you run the installer, it will prompt you to provide the password
+   #    for the username for each node.
+   # -----------------------------------------------------------------------------------------#
+
+  worker-nodes:
+    - hostname: yourdomain-workernode1.yourenterprise.net
+      username: root
+      node-size: # Default is taken from default-node-size property
+      labels: [zk, kafka]
+    - hostname: yourdomain-workernode2.yourenterprise.net
+      username: root
+      labels: [zk, kafka, th-processing, th-platform]
+    - hostname: yourdomain-workernode3.yourenterprise.net
+      username: root
+      labels: [zk, kafka, th-processing, th-platform]
+   
+   # The worker-nodes properties define the FQDN list of Worker Nodes in the cluster. You
+   # must specify at least one Worker Node unless you allowed deploying workload onto
+   # master node by enabling allow-worker-on-master (above). For high availability, we
+   # recommend a minimum of 3.
+   #    NOTE: If you want fewer than 3 Worker Nodes, remove the unnecessary 
+   #          'hostname/username/labels' from the list. This list illustrates one scenario 
+   #          of how labels can be applied for a 3-node Transformation Hub deployment.
+   #
+   # hostname
+   #   Specifies the FQDN of the Worker Node.
+   #
+   # username
+   #   Specifies which user should be used to connect to the node using ssh and perform the
+   #   installation. When you run the installer, it will prompt you to provide the 
+   #   password for the username for each node.
+   #
+   # node-size
+   #   Specify a value only if the Worker Node will have a different size from the
+   #   default-node-size value that you previously specified.
+   #
+   # labels
+   #   Specifies values that represent the workloads you want to assign to the node. Each
+   #   Worker Node runs specific workloads based on the label(s) assigned to the node. You
+   #   can specify one or more labels per Worker. You can also not specify a label for a
+   #   worker. By default, no labels are set.
+   #
+   #   Fusion labels: 
+   #    - fusion
+   #     NOTE: The Recon, ESM, and SOAR capabilities require Fusion. Add the 'fusion' label
+   #           to all worker nodes where you want these capabilities to run.
+   #
+   #   Transformation Hub labels:
+   #    - zk
+   #    - kafka
+   #    - th-platform
+   #    - th-processing
+   #     NOTE: These labels apply only when Transformation Hub is deployed.
+   #
+   #   ArcSight Intelligence labels:
+   #    - intelligence
+   #    - intelligence-spark
+   #    - intelligence-datanode
+   #    - intelligence-namenode
+   #     NOTE: These labels apply only when ArcSight Intelligence is deployed.
+   #
+   #
+# --------------------------------------------------------------------------------------------#
+
+
+# --------------------------------------------------------------------------------------------#
+suite:
+  products: [transformationhub, fusion, recon]
+  config-params:
+    th-kafka-count: 3
+    th-zookeeper-count: 3
+  # CONFIGURING THE SUITE DEPLOYMENT
+  #  In this section, you define the capabilities that you want to deploy and how they should
+  #  be configured.
+  #
+  #  products 
+  #    Specifies one or more capabilities to deploy. Some capabilities depend on other 
+  #    capabilities, so be sure to specify all that are required for your environment.
+  #    For example, ArcSight Recon requires Transformation Hub and Fusion; so, for the 
+  #    products property, specify [transformationhub, fusion, recon].
+  #    Valid capabilities are:
+  #      - transformationhub - Requires fusion
+  #      - fusion
+  #      - recon - Requires transformationhub and fusion
+  #      - intelligence - Requires transformationhub and fusion
+  #      - esm - Requires fusion
+  #      - layered-analytics - Requires esm and intelligence
+  #
+  #  config-params  
+  #    Specify the configuration properties for the capabilities being deployed. The
+  #    The following is a sample of two Transformation Hub configuration properties:
+  #       th-kafka-count: 3
+  #       th-zookeeper-count: 3
+  #
+  #    Because the list of configuration properties is lengthy, this guide does not list
+  #    them all. Each property has a default value and some properties can easily be
+  #    modified after installation using the CDF Management Portal. For those properties
+  #    that are difficult or not possible to modify after installation, it's important to set
+  #    them to the necessary value here BEFORE you begin the installation process. For more 
+  #    information about these properties, see "Configuring the Deployed Capabilities" in the 
+  #    Administrator's Guide to ArcSight Platform: 
+  #       https://www.microfocus.com/documentation/arcsight/arcsight-platform-21.1/as_platform_admin_guide/index.html#deployment_manual/platform_configure_cap.htm
+  #
+  #    The example installer configuration files provide examples of some of these
+  #    properties and the values that are appropriate for the example scenario.
+  #
+  #    NOTE: If you do not specify any config-params properties, the default value of all
+  #          properties will be used.
+# --------------------------------------------------------------------------------------------#
+
+
+# --------------------------------------------------------------------------------------------#
+nfs:
+  node:
+    hostname: yourdomain-nfs.yourenterprise.net
+    username: root
+  type: preconfigured
+  root-folder: /opt/arcsight-nfs
+  uid: 1999
+  gid: 1999
+  # CONFIGURING NETWORK FILE SYSTEM CONNECTIVITY
+  #  In this section, you define Network File System (NFS) connectivity, which is required.
+  #  NFS FQDN is the recommended deployment model. The default type is new.
+  #    NOTES: 
+  #     - If the 'hostname' is set to an NFS FQDN:
+  #        - When you set the 'type' to 'new', the installer will install NFS on the
+  #          provided hostname and connect to it.
+  #        - When you set the 'type' to 'preconfigured', the installer will connect to an
+  #          existing NFS on the hostname. For a highly available system, use this option
+  #          and configure the connection to an NFS share that you have created on a highly
+  #          available storage device.  
+  #     - If the 'hostname' is not provided, NFS will be silently installed on Initial
+  #       Master Node as an internal and local cluster NFS. This is the default behavior.
+  #
+  #  root-folder
+  #    Specifies the NFS root folder. The default is opt/arcsight-nfs.
+  #
+  #  uid
+  #    Specifies the user id. The default is 1999.
+  #
+  #  gid
+  #    Specifies the group id. The default is 1999.
+# --------------------------------------------------------------------------------------------#
+
+
+# --------------------------------------------------------------------------------------------#
+database:
+  db-installer-dir: /opt/arcsight-db-tools
+  type: new
+  ssl-enabled: false
+  ssl-client-auth-enabled: false
+  db-admin: dbadmin
+  app-admin: appadmin
+  search-user: search
+  shard-count: 18
+  data-dir: /opt/vertica/data
+  depot-dir: /opt/vertica/depot
+  s3:
+    type: preconfigured
+    server: yourdomain-s3-server.yourenterprise.net
+    port: 443
+    url: s3://bucket/folder
+    access-key: S3_ACCESS_KEY
+    tls-enabled: true
+    region: your-s3-region
+  hardware:
+    cpu: 8
+    memory: 32
+    disk: 500
+  nodes:
+    - hostname: yourdomain-database1.yourenterprise.net
+      username: root
+    - hostname: yourdomain-database2.yourenterprise.net
+      username: root
+    - hostname: yourdomain-database3.yourenterprise.net
+      username: root
+  event-consumer-properties:
+    max_parallelism: 6
+    MaxROSPerStratum: 16
+    MergeOutInterval: 60
+    plannedconcurrency: 5
+    maxconcurrency: 10
+    tm_memory_usage: 10000
+    ingest_pool_memory_size: 30%
+    ingest_pool_planned_concurrency: 12
+    future_days_threshold: 1
+    past_days_threshold: 7
+    tm_concurrency: 5
+    tm_memory: 6000
+
+  #
+  # CONFIGURING THE DATABASE
+  #   In this section, you specify the deployment properties for the unified storage
+  #   database. Some deployments (e.g. Transformation Hub only) do not require a database.
+  #   If your deployment does not require the unified storage database you may remove this
+  #   section.
+  #     NOTE: If you want fewer than 3 Database Nodes, remove the unnecessary
+  #           'hostname/username' from the list. 
+  #  
+  #  db-installer-dir 
+  #    Specifies the path to the database installer, which you can use post-installation 
+  #    to reconfigure the database. The default is /opt/arcsight-database.
+  #
+  #  type 
+  #    Specifies that a new database cluster should be deployed and the database schema 
+  #    will be deployed into this cluster. You must set this value to "new".
+  #
+  #  ssl-enabled 
+  #    Specifies whether SSL should be enabled when communicating with the database. Set
+  #    to 'true' or 'false'. The default is false.
+  #
+  #  ssl-client-auth-enabled 
+  #    Specifies whether the Database should be able to connect to a Transformation Hub
+  #    that is operating in SSL client authentication mode, which is the case when the  
+  #    suite config-params th-init-client-auth is set to true. Set to 'true' or 'false'. 
+  #    The default is false.
+  #
+  #  db-admin 
+  #    Specifies the userID of the Database Admin. The default is 'dbadmin'.
+  #
+  #  app-admin 
+  #    Specifies the userID of the Application Admin. The default is 'appadmin'.
+  #
+  #  search-user 
+  #    Specifies the userID of the Search user. The default is 'search'.
+  #
+  #  shard-count:
+  #    Specifies the number of shards for database. The number of shards can not be changed after database installation.
+  #    If you plan to keep the database cluster to a single node in the future,  optimize the database for performance on a single node by setting the shard count to 3.
+  #    Otherwise, optimize the database for scalability by setting the default shard count to 18.
+  #
+  #  data-dir
+  #    Specifies the path to the database data directory.
+  #
+  #  depot-dir
+  #    Specifies the path to the database depot directory.
+  #
+  #  s3
+  #    Specifies the S3 storage for database installation.
+  #      type
+  #        Specifies S3 storage type. The value must be 'preconfigured'. User must provide S3 storage before installation.
+  #
+  #      server
+  #        Specifies FQDN of the S3 storage server
+  #
+  #      port
+  #        Specifies the port of the S3 storage server
+  #
+  #      url
+  #        Specifies the S3 URL in the format of s3://bucket/folder
+  #
+  #      access-key
+  #        Specifies S3 access key to the S3 storage
+  #
+  #      tls-enabled:
+  #        Specifies whether SSL should be enabled when communicating with the S3 storage. Set
+  #        to 'true' or 'false'. The default is false.
+  #
+  #      region
+  #        Specifies the region of S3 storage if applicable. For AWS, the region need to be set properly.
+  #
+  #  hardware 
+  #    Specifies the minimum hardware requirements for the Database. Defaults are cpu: 8,
+  #    memory: 32, disk: 100 (GB).
+  #
+  #  nodes 
+  #    Specifies the FQDN list of the database nodes in the cluster. You must specify values 
+  #    for at least one database node. For high availability, we recommend a minimum of 3
+  #    nodes. For each node, specify the following:
+  #      hostname
+  #        Specifies the FQDN of the Database Node.
+  #
+  #      username
+  #        Specifies which user should be used to connect to the node using ssh and perform
+  #        the installation. When you run the installer, it will prompt you to provide the 
+  #        password for the username for each node.
+  #
+  #  event-consumer-properties (advanced)
+  #    Specifies database event consumer properties.  Modifying these properties requires an advanced 
+  #    level of understanding of the database.  The recommendation is to avoid using these
+  #    properties (which means the default will be used) unless you receive specific guidance
+  #    on the correct value, for example from the Technical Requirements documentation or your support
+  #    engineer.
+  #       max_parallelism:
+  #       The maximum number of simultaneous COPY statements created for the microbatch.
+  #
+  #       MergeOutInterval:
+  #       Specifies in seconds how frequently the Tuple Mover checks the mergeout request queue for pending requests
+  #
+  #       plannedconcurrency:
+  #       The number of concurrent numbers of concurrent execution slots available to TM pool.
+  #
+  #       maxconcurrency:
+  #       Sets across all nodes the maximum number of concurrent execution slots available to TM pool.
+  #
+  #       tm_memory_usage:
+  #       TM GB memory size
+  #
+  #       ingest_pool_memory_size:
+  #       Scheduler settings for the ingest_pool resource pool memory size
+  #
+  #       ingest_pool_planned_concurrency:
+  #       The number of concurrent numbers of concurrent execution for the ingest_pool resource pool
+  #
+  #       MaxROSPerStratum:
+  #       Maximum of number of ROSes in a stratum once reached merge out happens
+  #
+  #       future_days_threshold:
+  #       Set this property to configure Normalized Event Time's future threshold.
+  #       For example if you set it to 1, then any events that come in with deviceReceiptTime more than a day in future,
+  #       value for normalized event time for those events will be set to database receipt time.
+  #
+  #       past_days_threshold:
+  #       Set this property to configure Normalized Event Time's past threshold.
+  #       For example if you set it to 7, then any events that come in with deviceReceiptTime more than 7 days in the past,
+  #       value for normalized event time for those events will be set to database receipt time.
+  #
+  #       tm_concurrency:
+  #       Specifies the preferred number queries to execute concurrently in the resource pool, across all nodes.
+  #
+  #       tm_memory:
+  #       Specifies how much memory is allocated to the TM pool per node.
+
+# --------------------------------------------------------------------------------------------#
+  
+
+# --------------------------------------------------------------------------------------------#
+
+infrastructure:
+  # CONFIGURING THE INFRASTRUCTURE
+  #  In this section, you specify additional configurations that might be required or 
+  #  desired.
+
+  ntp-server: yourdomain-ntp.yourenterprise.net
+   # The ntp-server (network time protocol) property specifies a public NTP server or pool
+   # address, or your enterprise's internal NTP server. The chrony ntp client will be 
+   # configured, enabled, and started on machines in the container cluster, NFS server (if
+   #  type=new), and database servers (if type=new).
+   #
+   # By specifying an ntp-server value, you explicitly ask for enabling chrony configuration.
+# --------------------------------------------------------------------------------------------#

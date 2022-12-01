@@ -1,0 +1,67 @@
+# ArcSight Recon single node installation configuration
+#
+# This example configures all components required by Recon to be installed on a single node including Fusion, Transformation Hub, and Database.
+#
+# Before using this example, you must do the following:
+# - Replace the hostname "yourdomain-node.yourenterprise.net" (same value in multiple locations) with the correct values for your environment.
+# - Set the values of arcmc-generator-id-start and arcmc-generator-id-end to form a valid Generator ID Range
+#     Generator ID Range: set a valid range within [1-16383]. 
+#     The difference between the values must be more than 100.
+#
+# Key aspects of this configuration are:
+# - Encryption: yes
+# - Transformation Hub TLS Client Auth: yes
+# - FIPS 140 mode: yes
+# - High Availability: no, since it is deployed on a single node
+#
+cluster:
+  default-node-size: medium
+  allow-worker-on-master: true
+  enable-fips: true
+  master-nodes:
+    - hostname: yourdomain-node.yourenterprise.net
+      username: root
+      labels: [zk, kafka, th-processing, th-platform, fusion]
+
+suite:
+  products: [transformationhub, fusion, recon]
+  config-params:
+    # Transformation Hub, defaults are commented
+    # th-init-fips: true
+    # th-init-noOfTopicPartitions: 6 # The ArcSight Platform Installer automatically sets th-arcsight-avro, mf-event-avro-enriched, and th-cef topic partition count to Number of Database Nodes * 24. Other topics use this parameter.
+    # th-init-kafkaRetentionBytesForVertica: When the database is colocated with the Kubernetes cluster, the ArcSight Platform Installer automatically calculates this value. 
+    # th-init-kafkaRetentionBytes: When the database is colocated with the Kubernetes cluster, the ArcSight Platform Installer automatically calculates this value.  
+    th-schema-registry-count: 1
+    transform-processor-replicas: 2
+    # enrichment-processor1-replicas: 2
+    # th-enrichment-processor-integrity-enabled: false
+    routing-processor1-replicas: 0
+    th-kafka-count: 1
+    th-zookeeper-count: 1
+    th-init-kafkaOffsetsTopicReplicationFactor: 1
+    th-init-topicReplicationFactor: 1
+    th-kafka-allow-plaintext: false
+    th-init-client-auth: true
+    # Fusion
+    # Generator ID parameters are mandatory parameters.
+    # Ensure that you set arcmc-generator-id-enable to true.
+    arcmc-generator-id-start: 
+    arcmc-generator-id-end: 
+    arcmc-generator-id-enable: true
+
+database:
+  type: new
+  ssl-enabled: true
+  ssl-client-auth-enabled: true
+  shard-count: 3
+  s3:
+    type: preconfigured
+    server: yourdomain-s3-server.yourenterprise.net
+    port: 443
+    url: s3://bucket/folder
+    access-key: S3_ACCESS_KEY
+    tls-enabled: true
+    region: your-s3-region
+  nodes:
+    - hostname: yourdomain-node.yourenterprise.net
+      username: root

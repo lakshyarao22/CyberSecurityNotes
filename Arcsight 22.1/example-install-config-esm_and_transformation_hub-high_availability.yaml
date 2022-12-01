@@ -1,0 +1,87 @@
+# ArcSight ESM and Transformation Hub high availability installation configuration
+#
+# This example configures all components required by ESM and Transformation Hub, including Fusion.
+# Use this example when you need to have ESM ingest events directly from Transformation Hub.  Transformation Hub will receive 
+# events from external sources such as ArcSight Connectors. This install configuration provides a good starting point 
+# if you anticipate your needs will grow since this configuration allows for further scaling when you need it without 
+# having to reinstall.
+#
+# Before using this example, you must do the following:
+# - Replace the hostname "yourdomain-*.yourenterprise.net" with the correct values for your environment.
+# - Set the values of arcmc-generator-id-start and arcmc-generator-id-end to form a valid Generator ID Range
+#     Generator ID Range: set a valid range within [1-16383]. 
+#     The difference between the values must be more than 100.
+#
+# Key aspects of this configuration are:
+# - Encryption: yes
+# - Transformation Hub TLS Client Auth: yes
+# - FIPS 140 mode: yes
+# - High Availability: yes
+# - The default settings in this configuration assume that all events exchanged over Transformation Hub will be in Avro event format,
+#      which is the optimal format for a combination of performance and integration. If you need Transformation Hub to handle other
+#      event formats, you can edit the system configuration after installation.
+#
+# This configuration deploys an HA (high availability) system:
+# - Kubernetes cluster has 3 master nodes so that it can tolerate a failure of a single master and still
+#      maintain master node quorum
+# - A FQDN hostname for a virtual IP is used so that clients accessing master nodes have a single reliable
+#      hostname to connect to that will shift to whatever is the current primary master node.
+# - Kubernetes cluster has 3 worker nodes
+#     - Transformation Hub's Kafka is deployed to all 3 worker nodes with data replication enabled (1 original, 1 copy)
+#        so that it can tolerate a failure of a single node and still remain operational.
+#     - Transformation Hub's ZooKeeper is deployed to all 3 worker nodes with data replication across the 3 nodes
+#        so that it can tolerate a failure of a single node and still remain operational.
+#     - Fusion, ESM services as well as Transformation Hub's platform and processing services are allocated across 2 worker
+#        nodes so that, if one of the nodes fails, Kubernetes can move all of the components to the other node and
+#        still remain operational.
+# - For the NFS configuration, use an NFS server that has high availability capabilities so that it is not a single
+#     point of failure.
+#
+cluster:
+  default-node-size: small
+  enable-fips: true
+  # The value of this property must be a hostname, not an IP address
+  virtual-ip-address: yourdomain-ha.yourenterprise.net
+  master-nodes:
+    - hostname: yourdomain-masternode1.yourenterprise.net
+      username: root
+    - hostname: yourdomain-masternode2.yourenterprise.net
+      username: root
+    - hostname: yourdomain-masternode3.yourenterprise.net
+      username: root
+  worker-nodes:
+    - hostname: yourdomain-workernode1.yourenterprise.net
+      username: root
+      labels: [zk, kafka]
+    - hostname: yourdomain-workernode2.yourenterprise.net
+      username: root
+      labels: [zk, kafka, th-processing, th-platform, fusion]
+    - hostname: yourdomain-workernode3.yourenterprise.net
+      username: root
+      labels: [zk, kafka, th-processing, th-platform, fusion]
+
+
+suite:
+  products: [transformationhub, fusion, esm]
+  config-params:
+    # Transformation Hub, defaults are commented
+    # th-init-fips: true
+    th-kafka-allow-plaintext: false
+    th-init-client-auth: true
+    routing-processor1-replicas: 0
+    # Fusion
+    vertica-enable: false
+    # Generator ID parameters are mandatory parameters.
+    # Ensure that you set arcmc-generator-id-enable to true.
+    arcmc-generator-id-start: 
+    arcmc-generator-id-end: 
+    arcmc-generator-id-enable: true
+
+nfs:
+  node:
+    hostname: yourdomain-nfs.yourenterprise.net
+    username: root
+  type: preconfigured
+  root-folder: /opt/arcsight-nfs
+  uid: 1999
+  gid: 1999

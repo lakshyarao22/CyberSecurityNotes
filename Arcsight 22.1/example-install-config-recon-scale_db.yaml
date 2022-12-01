@@ -1,0 +1,89 @@
+# ArcSight Recon Scaled Database installation configuration
+#
+# This example configures all components required by Recon including Fusion, Transformation Hub, and Database.
+# Use this example when you need to scale the Database beyond a single node in order to handle your workload
+# and storage requirements, but you don't yet wish to invest in high availability.
+# 
+# Before using this example, you must do the following:
+# - Replace the hostname "yourdomain-*.yourenterprise.net" with the correct values for your environment.
+# - Set the values of arcmc-generator-id-start and arcmc-generator-id-end to form a valid Generator ID Range
+#     Generator ID Range: set a valid range within [1-16383]. 
+#     The difference between the values must be more than 100.
+#
+# Key aspects of this configuration are:
+# - Encryption: yes
+# - Transformation Hub TLS Client Auth: yes
+# - FIPS 140 mode: yes
+# - High Availability: no/limited
+#
+# This configuration deploys limited HA (high availability):
+# - Database has 3 nodes with data replication enabled (1 original, 1 copy) so that it can tolerate a failure of a
+#     single node and remain operational.
+# - For the NFS configuration, use an NFS server that has high availability capabilities so that it is not a single
+#     point of failure.
+# - The Kubernetes cluster in this configuration is not HA because there is only a single node in the cluster
+#
+cluster:
+  default-node-size: small
+  allow-worker-on-master: true
+  enable-fips: true
+  master-nodes:
+    - hostname: yourdomain-masternode1.yourenterprise.net
+      username: root
+      labels: [zk, kafka, th-processing, th-platform, fusion]
+
+suite:
+  products: [transformationhub, fusion, recon]
+  config-params:
+    # Transformation Hub, defaults are commented
+    # th-init-fips: true
+    # th-init-noOfTopicPartitions: 6 # The ArcSight Platform Installer automatically sets th-arcsight-avro, mf-event-avro-enriched, and th-cef topic partition count to Number of Database Nodes * 24. Other topics use this parameter.
+    th-kafka-allow-plaintext: false
+    th-init-client-auth: true
+    transform-processor-replicas: 1
+    enrichment-processor1-replicas: 1
+    # th-enrichment-processor-integrity-enabled: false
+    routing-processor1-replicas: 0
+    th-schema-registry-count: 1
+    th-kafka-count: 1
+    th-zookeeper-count: 1
+    th-init-kafkaOffsetsTopicReplicationFactor: 1
+    th-init-topicReplicationFactor: 1
+    th-init-kafkaRetentionBytesForVertica: 60 # Sets the retention size gigabytes for th-arcsight-avro topic. Recommend adjusting this number based on the ArcSight system sizing calculator guidance.
+    th-init-kafkaRetentionBytes: 60 # Sets the retention size gigabytes for th-cef and other topics. Recommend adjusting this number based on the ArcSight system sizing calculator guidance.
+    # Fusion
+    # Generator ID parameters are mandatory parameters.
+    # Ensure that you set arcmc-generator-id-enable to true.
+    arcmc-generator-id-start: 
+    arcmc-generator-id-end: 
+    arcmc-generator-id-enable: true
+    
+nfs:
+  node:
+    hostname: yourdomain-nfs.yourenterprise.net
+    username: root
+  type: preconfigured
+  root-folder: /opt/arcsight-nfs
+  uid: 1999
+  gid: 1999
+
+database:
+  type: new
+  ssl-enabled: true
+  ssl-client-auth-enabled: true
+  shard-count: 18
+  s3:
+    type: preconfigured
+    server: yourdomain-s3-server.yourenterprise.net
+    port: 443
+    url: s3://bucket/folder
+    access-key: S3_ACCESS_KEY
+    tls-enabled: true
+    region: your-s3-region
+  nodes:
+    - hostname: yourdomain-database1.yourenterprise.net
+      username: root
+    - hostname: yourdomain-database2.yourenterprise.net
+      username: root
+    - hostname: yourdomain-database3.yourenterprise.net
+      username: root

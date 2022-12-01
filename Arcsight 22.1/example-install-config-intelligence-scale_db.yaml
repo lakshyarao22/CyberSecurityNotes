@@ -1,0 +1,123 @@
+# --------------------------------------------------------------------------------------------#
+#      A R C S I G H T   I N T E L L I G E N C E   L I M I T E D   H A   T E M P L A T E      #
+# --------------------------------------------------------------------------------------------#
+#
+# This template configures all components required by Intelligence including Fusion, Transformation Hub and Database.
+#
+# It supports 
+# - Modest EPS with minimal number of nodes
+# - Scale out with multiple worker nodes
+# - High availability of the database
+#
+# Before using this template, you must do the following:
+# - Replace the hostname "yourdomain-masternode1.yourenterprise.net" with hostname of your master node
+# - Replace the hostnames "yourdomain-workernode1.yourenterprise.net, yourdomain-workernode2.yourenterprise.net, yourdomain-workernode3.yourenterprise.net" with hostnames of your worker nodes
+# - Replace the hostnames "yourdomain-database1.yourenterprise.net, yourdomain-database2.yourenterprise.net, yourdomain-database3.yourenterprise.net" with hostnames of your database cluster
+# - Replace the hostname "yourdomain-nfs.yourenterprise.net" with hostname of your NFS node
+# - Replace "changeme" (for config parameter interset-elasticsearch-password)
+# - Replace "changeme" (for config parameter interset-h2-password)
+# - Change "64424509440" (for config parameter th-init-kafkaRetentionBytesForVertica) as per ArcSight system sizing calculator guidance
+# - Change "64424509440" (for config parameter th-init-kafkaRetentionBytes) as per ArcSight system sizing calculator guidance
+# - Set the values of arcmc-generator-id-start and arcmc-generator-id-end to form a valid Generator ID Range
+#     Generator ID Range: set a valid range within [1-16383]. 
+#     The difference between the values must be more than 100.
+# 
+# Key aspects of this configuration are:
+# - Encryption: yes
+# - Transformation Hub TLS Client Auth: yes
+# - High Availability (of cluster): no, since it is deployed with only 1 master node
+# - High Availability (of database): yes
+# - Scale out: yes
+# - FIPS 140 mode: yes
+#
+# This configuration deploys limited HA (high availability) system:
+# - Kubernetes cluster overall is not highly available since it is deployed with only 1 master node
+# - Kubernetes cluster has 3 worker nodes
+#     - Transformation Hub's Kafka is deployed to all 3 worker nodes with data replication enabled (1 original, 1 copy)
+#        so that it can tolerate a failure of a single node and still remain operational.
+#     - Transformation Hub's ZooKeeper is deployed to all 3 worker nodes with data replication across the 3 nodes
+#        so that it can tolerate a failure of a single node and still remain operational.
+#     - Fusion and Intelligence services as well as Transformation Hub's platform and processing services are allocated across 3 worker
+#        nodes so that, if one of the nodes fails, Kubernetes can move all of the components to the other node and
+#        still remain operational.
+# - Database has 3 nodes with data replication enabled (1 original, 1 copy) so that it can tolerate a failure of a
+#     single node and remain operational.
+# - For the NFS configuration, use an NFS server that has high availability capabilities so that it is not a single
+#     point of failure.
+# --------------------------------------------------------------------------------------------#
+cluster:
+  default-node-size: medium
+  enable-fips: true
+  master-nodes:
+    - hostname: yourdomain-masternode1.yourenterprise.net
+      username: root
+  worker-nodes:
+    - hostname: yourdomain-workernode1.yourenterprise.net
+      username: root
+      labels: [fusion, zk, kafka, th-processing, th-platform, intelligence, intelligence-datanode, intelligence-namenode, intelligence-spark]
+    - hostname: yourdomain-workernode2.yourenterprise.net
+      username: root
+      labels: [fusion, zk, kafka, th-processing, th-platform, intelligence, intelligence-datanode, intelligence-spark]
+    - hostname: yourdomain-workernode3.yourenterprise.net
+      username: root
+      labels: [fusion, zk, kafka, th-processing, th-platform, intelligence, intelligence-datanode, intelligence-spark]
+suite:
+  products: [fusion, transformationhub, intelligence]
+  config-params:
+    # Transformation Hub, defaults are commented
+    # th-init-fips: true
+    # th-init-noOfTopicPartitions: 6 # The ArcSight Platform Installer automatically sets th-arcsight-avro, mf-event-avro-enriched, and th-cef topic partition count to Number of Database Nodes * 24. Other topics use this parameter.
+    th-init-client-auth: true
+    th-kafka-allow-plaintext: false
+    transform-processor-replicas: 2
+    # enrichment-processor1-replicas: 2
+    routing-processor1-replicas: 0
+    th-init-kafkaRetentionBytesForVertica: 60 # Sets the retention size gigabytes for th-arcsight-avro topic. Recommend adjusting this number based on the ArcSight system sizing calculator guidance.
+    th-init-kafkaRetentionBytes: 60 # Sets the retention size gigabytes for th-cef and other topics. Recommend adjusting this number based on the ArcSight system sizing calculator guidance.
+    # Intelligence
+    # interset-hdfs-namenode: yourdomain-workernode1.yourenterprise.net # The ArcSight Platform Installer automatically sets set worker node where "intelligence-namenode" label is present
+    interset-vertica-number-of-nodes: 3
+    interset-elasticsearch-data-instances: 3
+    interset-elasticsearch-index-replicas-count: 3
+    #interset-logstash-pipeline-workers: 3
+    interset-elasticsearch-password: changeme
+    interset-h2-password: changeme
+    interset-elasticsearch-index-shards-count: 3
+    interset-logstash-event-buffering: persisted
+    interset-analytics-overhead-memory: 0.2
+    # Fusion
+    # Generator ID parameters are mandatory parameters.
+    # Ensure that you set arcmc-generator-id-enable to true.
+    arcmc-generator-id-start: 
+    arcmc-generator-id-end: 
+    arcmc-generator-id-enable: true
+
+nfs:
+  node:
+    hostname: yourdomain-nfs.yourenterprise.net
+    username: root
+  type: preconfigured
+  root-folder: /opt/arcsight-nfs
+  uid: 1999
+  gid: 1999
+
+database:
+  type: new
+  ssl-enabled: true
+  ssl-client-auth-enabled: true
+  shard-count: 18
+  s3:
+    type: preconfigured
+    server: yourdomain-s3-server.yourenterprise.net
+    port: 443
+    url: s3://bucket/folder
+    access-key: S3_ACCESS_KEY
+    tls-enabled: true
+    region: your-s3-region
+  nodes:
+    - hostname: yourdomain-database1.yourenterprise.net
+      username: root
+    - hostname: yourdomain-database2.yourenterprise.net
+      username: root
+    - hostname: yourdomain-database3.yourenterprise.net
+      username: root

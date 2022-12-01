@@ -1,0 +1,33 @@
+# ArcSight ESM Command Center single node installation configuration
+#
+# This example configures all components required by ESM Command Center to be installed on a single node, including Fusion.
+# 
+# Before using this example, you must do the following:
+# - Replace the hostname "yourdomain-node.yourenterprise.net" (same value in multiple locations) with the correct values for your environment.
+#
+# Key aspects of this configuration are:
+# - Encryption: yes
+# - TLS Client Auth: no, not applicable for the capabilities deployed
+# - FIPS 140 mode: yes
+# - High Availability: no, since it is deployed on a single node
+# - This configuration is compatible with installing ESM manager on the same machine.  ESM manager should be installed first.
+#     ESM Manager uses port 8443, so master-api-ssl-port is set to a different port to avoid a conflict.
+#
+cluster:
+  default-node-size: medium
+  allow-worker-on-master: true
+  enable-fips: true
+  master-api-ssl-port: 7443
+  master-nodes:
+    - hostname: yourdomain-node.yourenterprise.net
+      username: root
+      labels: [fusion]
+
+suite:
+  products: [fusion, esm]
+  config-params:
+    # Fusion
+    vertica-enable: false
+    arcmc-generator-id-start: 1
+    arcmc-generator-id-end: 16000
+    arcmc-generator-id-enable: true
