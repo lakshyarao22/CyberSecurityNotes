@@ -49,7 +49,7 @@ nfs:
 * Follow Previous steps
 * Select CEF Syslog format
 * Select host master.advantageinc.org:**32200**
-* Enable *ArcSightListenerEnabled* on https://master.advantageinc.org/soar/#/configuration/parameter
+* Enable *ArcSightListenerEnabled* on <https://master.advantageinc.org/soar/#/configuration/parameter>
 * Change following Parameters on Installer
 
 ``` yaml
@@ -61,3 +61,17 @@ CEF Version: 0.1
 ```
 
 * If Facing Error try changing password for apiSOAR user or Disable or enable the user
+
+## Adding Capabilites to fusion
+
+1. Upload Images using image script
+
+2. Create lable on CDF portal
+
+3. Link the lable with capability on CDF portal
+
+4. Install the capabilites on CDF Portal
+
+5. Stop and start fusion User Manager Pods
+
+6. Link your user to that particuclar capability.
