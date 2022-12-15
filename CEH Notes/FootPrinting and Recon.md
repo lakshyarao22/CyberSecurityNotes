@@ -49,7 +49,7 @@ docs.google.com
 
 * [Netcraft](https://www.netcraft.com/tools/)
 * [Sublist3r](https://github.com/aboul3la/Sublist3r) for subdomain enumeration
-* [ARIN](https://www.arin.net/) used to get info for 
+* [ARIN](https://www.arin.net/) used to get info for
 * [RDAP](https://www.icann.org/rdap)
 * [TraceRoute](https://www.fortinet.com/resources/cyberglossary/traceroutes) to see path of traffic.
 * [Path Analyzer Pro](https://download.cnet.com/Path-Analyzer-Pro-Windows/3000-2085_4-10620979.html) used to see path of traffic.
