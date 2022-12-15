@@ -79,12 +79,24 @@ It can send logs in 3 languages
   ./arcsight-install --cmd cdf
 ```
 
-10. Enable Databse on ITOM Portal => Fusion
+  10. Enable Databse on ITOM Portal => Fusion
 
-11. To run post install script
+  11. To run post install script
 
   ``` bash
   ./arcsight-install --cmd postinstall
+  ```
+  12. Uninstallation
+  
+  ```bash
+  ## On Master Node
+  ./arcsight-install --cmd uninstall
+  cd /opt
+  rm -rf arcsight* containerd/ kubernetes/
+  ## On every other node
+  rm -rf /opt/*
+  ## On master
+  
   ```
 
 ## Notes

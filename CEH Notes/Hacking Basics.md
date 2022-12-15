@@ -1,4 +1,7 @@
-# Threats
+# Hacking Basics
+
+## Threats
+
 ### Threat Maps
 
 * [FireEye](https://www.fireeye.com/cyber-map/threat-map.html)
@@ -21,7 +24,7 @@
 
 **Accessibility** :- One who could Access should be able to access the data any time.
 
-## Hacker's job is to 
+## Hacker's job is to:-
 
 Breach - Confidentiality
 
@@ -31,9 +34,9 @@ Reduce Accessibility
 
 **Authenticity** :- used to verify integrity.
 
-**Security Triangle**
+## Security Triangle
 
-```
+``` Text
                  Security
                      A
                     / \
@@ -43,29 +46,32 @@ Reduce Accessibility
                 /_________\
   Functionality             Usability
 ```
+
 These 3 things should be balanced
 
 **Attack Vector** :- The doorway to attack a system.
 
 **Threat Actor** :- Creator of Threat.
 
-
 ## **Threat** is something which has possibility of **exploit** against a **vulnerability**
 
-# Threat Catagories
+### Threat Catagories
 
-## Network Threats
+### Network Threats
+
 * MITM(Man In The Middle)
 * DoS / DDoS
 * DNS / ARP Poisoning
   
 ## Host Threats
+
 * Password Cracking
 * Malware
 * Privilege Escalation
 * Code Execution
   
 ## Application Threats 
+
 * Injection attacks
 * Buffer Overflow
 * Security Misconfigurations
@@ -73,26 +79,29 @@ These 3 things should be balanced
 
 **APT** :- Advanced Persistent Threats
 
-# Types Of Security
+## Types Of Security
 
-## Defensive
-## Offensive
+### Defensive
+
+### Offensive
+
 * Annoyance e.g. Honeypots
 * attribution e.g. Web Bug
 * Attack
 
-# Types of Hackers
+## Types of Hackers
 
 * **Black Hat** :- use Knowledge for malicious intent
-*  **Grey Hat** :- use Knowledge for both malicious intent and good intent
-*  **White Hat** :- use Knowledge for good intent
+* **Grey Hat** :- use Knowledge for both malicious intent and good intent
+* **White Hat** :- use Knowledge for good intent
 * **Suicide Hackers** :- Who want to watch the system go down
 * **Script Kiddies** :- Who do not have in-depth knowledge about computers and Hacking.
 * **Cyber Terrorist** :- Who cause loss of Life
 * **State Sponsored** :- Who protect country and its allies and attack enemy.
 * **Hacktivists** :- It is the act of hacking, or breaking into a computer system, for politically or socially motivated purposes.
   
-# Hacking Phases
+## Hacking Phases
+
 1. [Recon](FootPrinting%20and%20Recon.md)
    * Passive
      * [Social Engineering](Social%20Engineering.md)
@@ -111,7 +120,9 @@ These 3 things should be balanced
 5. Covering Up tracks
    * Modifying logs
    * Hiding malware
-# Cyber kill chain
+
+## Cyber kill chain
+
 1. **Reconnaissance**:- Research, identification, and selection of targets.
 2. **Weaponization**:- Pairing remote access malware with exploit into a deliverable payload (e.g., Adobe PDF and Microsoft Office files).
 3. **Delivery**:- Transmission of weapon to target (e.g., via email attachments, websites, or USB drives).

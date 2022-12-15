@@ -4,7 +4,8 @@
 
 **Passive** :- Without Direct Interaction
 
-### What can be stealed?
+## What can be stealed?
+
 * System Information
 * Username and passwords
 * DNS and firewall
@@ -25,16 +26,17 @@ use **-Info** to remove "info" from search output
 
 [Google Dorks Database](https://www.boxpiper.com/posts/google-dork-list)
 
-# [Shodan](https://www.shodan.io/) And [Censys](https://search.censys.io/)
+## [Shodan](https://www.shodan.io/) And [Censys](https://search.censys.io/)
 
 Shodan is used to find open ports vulnerabilities etc. on an IP or domain.
 
 Similarly, we can use Censys to find hosts, IP Address, etc.
 
-# Sub-Domain Enumeration
+## Sub-Domain Enumeration
+
 It is the practice of checking subdomains from list of common domains One-By-One.
 
-``` 
+``` text
         ____ Registered Domain
        v
 docs.google.com
@@ -58,17 +60,21 @@ docs.google.com
 * [Recon-NG](https://www.kali.org/tools/recon-ng/) Metasploit for OSINT.
 * [TheHarvester](https://www.kali.org/tools/theharvester/) The tool gathers names, emails, IPs, subdomains, and URLs by using
 multiple public resources
+
 ## Tools for location Recon
+
 * [Google Maps](https://www.google.com/maps)
 * [Wikimap](https://wikimapia.org/##lang=en&lat=0.000000&lon=0.000000&z=12&m=w)
 
 ## Job Posting Recon
+
 Job postings can be used to determine the technologies of a organization.
 
 * [Monster.com](https://www.monster.com/)
 * [LinkedIn](https://www.linkedin.com/jobs/)
 
-# Protection Against Recon
+## Protection Against Recon
+
 * Find wrong and make policy and procedure
 * Training and Awareness
 * [Who.is](https://who.is/) privacy services
@@ -76,10 +82,11 @@ Job postings can be used to determine the technologies of a organization.
 * Be paranoid on social Media
 * Disable location services
 * Sanitize job listings
-## Tools
+
+### Tools To Protect Against Recon
+
 * [Freenet](https://freenetproject.org/index.html)
 * [RetroShare](https://retroshare.cc/)
 * [Tor Browser](https://www.torproject.org/download/)
 * [Tails OS](https://tails.boum.org/)
 * [Hidden WiKi](https://thehiddenwiki.org/)
-
