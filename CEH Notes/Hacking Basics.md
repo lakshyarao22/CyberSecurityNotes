@@ -24,6 +24,10 @@
 
 **Accessibility** :- One who could Access should be able to access the data any time.
 
+**Authencity** :- everything is as it should be and all members are agreed upon.
+
+**Non - Repudation** :- if something is changed by someone then that person couldn't refuse the same.
+
 ## Hacker's job is to:-
 
 Breach - Confidentiality
@@ -31,8 +35,6 @@ Breach - Confidentiality
 Disintegrate - Integrity
 
 Reduce Accessibility
-
-**Authenticity** :- used to verify integrity.
 
 ## Security Triangle
 

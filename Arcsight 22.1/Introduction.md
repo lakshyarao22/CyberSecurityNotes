@@ -20,10 +20,10 @@
 * Layered Analytics Identity Governance
 
 ---
-Facts
+#### Facts
 
 ``` notes
-TH is Kafka in backend
+TH has Kafka in backend
 ESM soon to be renamed to detect
 ```
 
@@ -81,7 +81,13 @@ It can send logs in 3 languages
 
   10. Enable Databse on ITOM Portal => Fusion
 
+<<<<<<< HEAD
+11. check k9s pods for !Running
+=======
   11. To run post install script
+>>>>>>> d2d02274f43d1df3b63b7a60a4e4f1126fc38035
+
+12. To run post install script
 
   ``` bash
   ./arcsight-install --cmd postinstall
@@ -98,6 +104,7 @@ It can send logs in 3 languages
   ## On master
   
   ```
+
 
 ## Notes
 
@@ -134,7 +141,7 @@ cd /opt/arcsight/kubernetes/bin
 
 ## User Management
 
-**RESET**  User Password
+**RESET** User Password
 
 ``` bash
 /opt/arcsight-nfs/arcsight-volume/investigate/mgmt/db
