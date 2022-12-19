@@ -26,7 +26,18 @@
 
 **Authencity** :- everything is as it should be and all members are agreed upon.
 
-**Non - Repudation** :- if something is changed by someone then that person couldn't refuse the same.
+**Non-Repudation** :- if something is changed by someone then that person couldn't refuse the same.
+
+## Hacker's Motive:-
+
+* Curiosity
+* Bragging Rights
+* Disruption of Businesses
+* Hacktivism
+* Political
+* Terrorism
+* Revenge
+* Cyber Crime(Money)
 
 ## Hacker's job is to:-
 
@@ -104,9 +115,9 @@ These 3 things should be balanced
 ## Hacking Phases
 
 1. [Recon](FootPrinting%20and%20Recon.md)
-   * Passive
+   * **Passive**
      * [Social Engineering](Social%20Engineering.md)
-   * Active
+   * **Active**
      * [Social Engineering](Social%20Engineering.md)
 2. Scanning
    * Find Ports and Services
