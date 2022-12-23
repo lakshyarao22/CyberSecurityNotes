@@ -91,6 +91,75 @@ These 3 things should be balanced
   
 **APT** :- Advanced Persistent Threats
 
+## Types Of Attacks
+
+### Passive Attack
+    * Gathering information passively. Not Actively Probing. Its not easy to detect. E.g. Sniffing the network.
+### Active Attack
+    * Actively probing. E.g. Manupulation of data, Disruption of services, Compromising private systems or the network in large. It could be detected. E.g. 
+        * DDoS
+        * Password Attacks
+        * Session Hijacking
+        * Impersonation
+        * Lateral movement
+        * SQL injection
+        * RCE
+### Close-in Attack
+    * getting sensetive info with physical proximity
+### Insider Attack
+    * Someone with trust in organisation exploiting data or causing threats.
+        * Pod slurping:- using a pocket device to steal data
+        * Stealing devices
+### Distribution Attacks
+    * Causing Harm to supply chain.
+	* Attack distribution system of vendor of target to disrupt business or install malware.
+
+## Information Warfare
+
+* Getting informational edge over competitor
+
+### C2 Warfare
+
+**Compromise** and take **Control** over opponents systems
+
+### Intellegence Based warfare
+
+Gathering more knowledge than opponents and also stop opponents in getting that information.
+
+### Electronic Warfare
+
+* Jamming the radio frequency or disrupt the communications
+
+* Encryption
+
+### Psycological
+
+Mass misinformation spreading in order to spread terror or confusion.
+
+### Hacker Warfare
+
+* Theaft Physical or electronic
+* Dos
+
+### Economic Warfare
+
+* Getting edge over opponent by means of money.
+
+### Cyber Warfare
+
+Mimics information warfare 
+
+    * **Symentac Attack**:- It is a takeover of a system where it appears normalicy is maintained.
+
+### Simulated Warfare
+
+Display of power or force.
+
+### Stratges
+
+* Offensive
+* Defensive
+
 ## Types Of Security
 
 ### Defensive
