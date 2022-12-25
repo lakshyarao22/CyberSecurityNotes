@@ -157,8 +157,8 @@ Display of power or force.
 
 ### Stratges
 
-* Offensive
-* Defensive
+* Offensive: attacking opponents.
+* Defensive: Protecting ourselves.
 
 ## Types Of Security
 
@@ -202,7 +202,7 @@ Display of power or force.
    * Modifying logs
    * Hiding malware
 
-## Cyber kill chain
+## [Cyber kill chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
 
 1. **Reconnaissance**:- Research, identification, and selection of targets.
 2. **Weaponization**:- Pairing remote access malware with exploit into a deliverable payload (e.g., Adobe PDF and Microsoft Office files).
