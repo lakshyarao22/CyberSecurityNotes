@@ -24,4 +24,6 @@ _______                       _______
 
 * Again send a SYN-ACK to printer to verify. If the IPID is incremental i.e. 1183 that means we have a good zombie as it don't have too much traffic running through it.
 
-* We Will use this 
+* We can use IPID as a reference and send SYN-ACK packet to target machine.
+
+* Now again check if IPID is update. If not then it means that host is not active or port not open.
