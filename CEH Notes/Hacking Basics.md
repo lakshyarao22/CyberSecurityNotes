@@ -66,7 +66,7 @@ These 3 things should be balanced
 
 **Threat Actor** :- Creator of Threat.
 
-## **Threat** is something which has possibility of **exploit** against a **vulnerability**
+**Threat** is something which has possibility of **exploit** against a **vulnerability**
 
 ### Threat Catagories
 
@@ -89,7 +89,7 @@ These 3 things should be balanced
 * Buffer Overflow
 * Security Misconfigurations
   
-**APT** :- Advanced Persistent Threats
+**APT** :- Advanced Persistent Threats. Threats which are pre planned to attack and a organisation and are persistent i.e. being in organisation for a very long time.
 
 ## Types Of Attacks
 
@@ -220,3 +220,10 @@ Display of power or force.
 5. **Installation**:- The weapon installs a backdoor on a target’s system, allowing persistent access.
 6. **Command and Control**:- Outside server communicates with the weapons providing “hands-on keyboard access” inside the target’s network.
 7. **Action and Objective**:- The attacker works to achieve the objective of the intrusion, which can include exfiltration or destruction of data, or intrusion of another target
+
+## TTP
+
+* Tactics:- A guideline for how to proceed with something. E.g. Look for Vulnerabilities in a network.
+* Technique:- Actual Action to be taken on set guideline. E.g. Use a vulnerability scanner.
+* Procedure:- A more fine tuned version of Technique. E.g. use a vulnerability scanner to look for Web Vulnerabilities.
+
