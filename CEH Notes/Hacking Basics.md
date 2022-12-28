@@ -26,7 +26,7 @@
 
 **Authencity** :- everything is as it should be and all members are agreed upon.
 
-**Non-Repudation** :- if something is changed by someone then that person couldn't refuse the same.
+**Non-Repudation** :- if something is changed by someone then that person couldn't refuse the same(Repudation:- Denial of truth)
 
 ## Hacker's Motive:-
 
