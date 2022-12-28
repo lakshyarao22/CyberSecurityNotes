@@ -8,7 +8,7 @@
 * [CheckPoint](https://threatmap.checkpoint.com/)
 * [Other Threat Maps](https://www.google.com/search?q=threat+map)
   
-**0day** :- Threats Unknown to OEM Or Still do not have Patches.
+**0day** :- Threats Unknown to OEM/Manufacturer Or Still do not have Patches.
 
 **doxing** :- releasing private info to public.
 
