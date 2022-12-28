@@ -30,7 +30,6 @@
 
 * (Repudation:- Denial of truth)
 
-
 ## Hacker's Motive:-
 
 * Curiosity
