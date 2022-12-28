@@ -26,7 +26,10 @@
 
 **Authencity** :- everything is as it should be and all members are agreed upon.
 
-**Non-Repudation** :- if something is changed by someone then that person couldn't refuse the same(Repudation:- Denial of truth)
+**Non-Repudation** :- if something is changed by someone then that person couldn't refuse the same
+
+* (Repudation:- Denial of truth)
+
 
 ## Hacker's Motive:-
 
@@ -221,9 +224,17 @@ Display of power or force.
 6. **Command and Control**:- Outside server communicates with the weapons providing “hands-on keyboard access” inside the target’s network.
 7. **Action and Objective**:- The attacker works to achieve the objective of the intrusion, which can include exfiltration or destruction of data, or intrusion of another target
 
+<<<<<<< HEAD
+## Tactics, Techniques and Procedures
+
+* **Tactics** : These are guiding principals and objectives.
+
+=======
 ## TTP
 
 * Tactics:- A guideline for how to proceed with something. E.g. Look for Vulnerabilities in a network.
 * Technique:- Actual Action to be taken on set guideline. E.g. Use a vulnerability scanner.
 * Procedure:- A more fine tuned version of Technique. E.g. use a vulnerability scanner to look for Web Vulnerabilities.
 
+
+>>>>>>> a85557816fedb7689c524a729505b019d96e7a0f
