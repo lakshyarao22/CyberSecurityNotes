@@ -221,7 +221,7 @@ Display of power or force.
 3. **Delivery**:- Transmission of weapon to target (e.g., via email attachments, websites, or USB drives).
 4. **Exploitation**:- Once delivered, the weapon’s code is triggered, exploiting vulnerable applications or systems.
 5. **Installation**:- The weapon installs a backdoor on a target’s system, allowing persistent access.
-6. **Command and Control**:- Outside server communicates with the weapons providing “hands-on keyboard access” inside the target’s network.
+6. **Command and Control**:- Outside server communicates with the weapons providing “hands-on keyboard access” inside the target’s network(Pass the data back & forth by using reverse TCP).
 7. **Action and Objective**:- The attacker works to achieve the objective of the intrusion, which can include exfiltration or destruction of data, or intrusion of another target
 
 <<<<<<< HEAD
