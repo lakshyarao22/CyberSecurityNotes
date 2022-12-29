@@ -228,6 +228,6 @@ Display of power or force.
 
 * Tactics:- A guideline for how to proceed with something. E.g. Look for Vulnerabilities in a network.
 * Technique:- Actual Action to be taken on set guideline. E.g. Use a vulnerability scanner.
-* Procedure:- A more fine tuned/advance version of Technique. E.g. use a vulnerability scanner to look for Web Vulnerabilities.
+* Procedure:- A more fine tuned version of Technique. E.g. use a vulnerability scanner to look for Web Vulnerabilities.
 
 
