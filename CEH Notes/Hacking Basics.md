@@ -224,12 +224,6 @@ Display of power or force.
 6. **Command and Control**:- Outside server communicates with the weapons providing “hands-on keyboard access” inside the target’s network(Pass the data back & forth by using reverse TCP).
 7. **Action and Objective**:- The attacker works to achieve the objective of the intrusion, which can include exfiltration or destruction of data, or intrusion of another target
 
-<<<<<<< HEAD
-## Tactics, Techniques and Procedures
-
-* **Tactics** : These are guiding principals and objectives.
-
-=======
 ## TTP
 
 * Tactics:- A guideline for how to proceed with something. E.g. Look for Vulnerabilities in a network.
@@ -237,4 +231,3 @@ Display of power or force.
 * Procedure:- A more fine tuned/advance version of Technique. E.g. use a vulnerability scanner to look for Web Vulnerabilities.
 
 
->>>>>>> a85557816fedb7689c524a729505b019d96e7a0f
