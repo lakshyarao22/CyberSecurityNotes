@@ -67,5 +67,66 @@ Assume data is system is already under attack or data breach then look for relat
 
 Make a Hypothesis that what types of attackers we have based on working of organisation. Finding vulnerabilities and TTP of potential attacker.
 
-Creating an IR before actual IR.
+Creating an IR before actual attack.
 
+## IoC
+
+Indicators of Compromise are indicators which point towards a security breach.
+
+### Types of IOCs
+
+* **Atomic** :- Self contained data
+    * IP address
+    * Email address
+
+* **Computed** :-
+    * Hash values
+    * Regex
+
+* **Behavioural**
+    * Logical combining of the Atomic and Computed IOCs
+
+### Catagories of IOCs
+
+* **Email** : Comprised of email artifacts
+    * Sender's email address
+    * Subject line 
+    * Attachments
+    * Links
+
+* **Network**
+    * Domain Info
+    * IP address
+
+* Host Based
+    * File Names
+    * Hash values
+    * Registry Entries
+    * dll or drivers
+
+* Behavioural
+    * Macros running Powershell
+    * Service accounts behaving as a user would
+
+### Examples
+
+* Anomalies in privilage user accounts
+* Red-Flags on login activity
+* Diviant DNS requests
+* Increased Datebase Read volumes
+* Sign of DDoS
+* More requests than usual for same types of files
+* unusual changes on Registry
+* Abrupt patching
+
+## Risks
+
+Something which have a probability of negative outcome to asset
+
+```math
+
+Threats x Vulnerabilities x Impacts = Risk
+
+Threat x Vulnerabilities x Asset Value = Risk
+
+```
