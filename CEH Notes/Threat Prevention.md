@@ -159,9 +159,9 @@ Impact * probability = Risk Level
 | | |  | | Severity | | |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | | | Very Low | Low | Medium | High | Very High |
-| | Very High | 💚  | 🔶 | | | |
-| | High | 💚 | 🔶 | 🔶 | | |
-|Probability | Medium | 💚 | 💚 | 🔶 | 🔶 | Red |
-| | Low | 💚 | 💚 | 💚 | 🔶 | 🔶 | Red |
-| | Very Low | 💚 | | | | |
+| | Very High | 💚  | 🔶 | 🔴 | 🔴 | 🔴 |
+| | High | 💚 | 🔶 | 🔶 | 🔴 | 🔴 |
+|Probability | Medium | 💚 | 💚 | 🔶 | 🔶 | 🔴 |
+| | Low | 💚 | 💚 | 🔶 | 🔶 | 🔴 |
+| | Very Low | 💚 | 💚 | 💚 | 🔶 | 🔶 |
 
