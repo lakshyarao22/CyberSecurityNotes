@@ -125,8 +125,37 @@ Something which have a probability of negative outcome to asset
 
 ```math
 
-Threats x Vulnerabilities x Impacts = Risk
+Threats X Vulnerabilities X Impacts = Risk
 
-Threat x Vulnerabilities x Asset Value = Risk
+Threat X Vulnerabilities X Asset Value = Risk
+
+Impact X probability = Risk Level
 
 ```
+
+* Low
+    * There is a threat but its unlikely to occure
+    * There is a threat but its Impact is neglegible
+* Medium
+    * Threat is likely but not imminent
+    * You have some time but its about to hit
+    * Mitigate asap to reduce risk/Impact
+* High
+    * Take IMMEDIATE action
+    * Threat is about to hit
+
+### Risk Matrix
+
+* High is Red
+* Mid is Orange
+* Low is Green
+
+| | |  | | Severity | | |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| | | Very Low | Low | Medium | High | Very High |
+| | Very High | Green | Orange | | | |
+| | High | Green | Orange| Orange | | |
+|Probability | Medium | Green | Green | Orange | Orange | Red |
+| | Low | Green | Green | Green | Orange| Orange| Red |
+| | Very Low | Green | | | | |
+
