@@ -125,17 +125,17 @@ Something which have a probability of negative outcome to asset
 
 ```math
 
-Threats X Vulnerabilities X Impacts = Risk
+Threats * Vulnerabilities * Impacts = Risk
 ```
 
 ```math
 
-Threat X Vulnerabilities X Asset Value = Risk
+Threat * Vulnerabilities * Asset Value = Risk
 ```
 
 ```math
 
-Impact X probability = Risk Level
+Impact * probability = Risk Level
 
 ```
 
