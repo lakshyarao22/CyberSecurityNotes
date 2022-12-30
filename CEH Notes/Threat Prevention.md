@@ -152,16 +152,16 @@ Impact * probability = Risk Level
 
 ### Risk Matrix
 
-* High is Red
-* Mid is Orange
-* Low is Green
+* High is Red 🔴
+* Mid is Orange 🔶
+* Low is Green 💚
 
 | | |  | | Severity | | |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | | | Very Low | Low | Medium | High | Very High |
-| | Very High | Green | Orange | | | |
-| | High | Green | Orange| Orange | | |
-|Probability | Medium | Green | Green | Orange | Orange | Red |
-| | Low | Green | Green | Green | Orange| Orange| Red |
-| | Very Low | Green | | | | |
+| | Very High | 💚  | 🔶 | | | |
+| | High | 💚 | 🔶 | 🔶 | | |
+|Probability | Medium | 💚 | 💚 | 🔶 | 🔶 | Red |
+| | Low | 💚 | 💚 | 💚 | 🔶 | 🔶 | Red |
+| | Very Low | 💚 | | | | |
 
