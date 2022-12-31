@@ -165,3 +165,40 @@ Impact * probability = Risk Level
 | | Low | 💚 | 💚 | 🔶 | 🔶 | 🔴 |
 | | Very Low | 💚 | 💚 | 💚 | 🔶 | 🔶 |
 
+## Risk Management
+
+Creating a process to reduce risk to acceptable level.
+
+### Objectives/Phases
+
+* **Identification** or **Identify**: Identification of risk and its Impact
+* **Prioritization** or **Asses**: Prioritize risks based on severity levels
+* **Mitigation** or **Treat**: Control mitigate and prevent risk
+* **Track and Review Risk**
+
+## Cyber Threat Intelligence or CTI
+
+Gathering, Processing and analysing the threat data to understand threats.
+
+* Motives
+* Targets and Goals
+* Attack Behaviours
+
+### Types of CTI
+
+* **Stratigic**: business stratigies intigrated with CTI ( Very high level ).
+* **Operational**: CTIs related with specific attacks affecting the organisation. ( high level )
+* **Tactical**: a more specific approach to CTIs i.e. If its a malware what type of malware it is. is it a RAT,is it a Trojan, etc. ( low level )
+* **Technical**: more specific than Tactical. i.e. Hashes, Domains, etc. ( very low level )
+
+## Threat Modeling
+
+A systematized approach to threat and security.
+
+* Know the enemy
+
+* Know Us
+
+### Process of threat Modeling
+
+* 
