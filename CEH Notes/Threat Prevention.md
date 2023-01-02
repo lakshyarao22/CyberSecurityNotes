@@ -8,9 +8,9 @@
 * Looking For Configuration
 * Pivoting and lateral Movement
 * Strange batch files
-* Strange Powershell/bash commands
+* Strange Power shell/bash commands
 
-### Powershell use
+### Power shell use
 
 Command line for windows which an attacker could use to gain access.
 
@@ -18,7 +18,7 @@ Command line for windows which an attacker could use to gain access.
 
 * Explore systems
 * Connect to External Resources.
-* Data Exfiltration
+* Data Ex-filtration
 
 ### CLI/Terminal use
 
@@ -26,7 +26,7 @@ Look for Administrative commands run by normal users
 
 ### HTTP Request Headers
 
-Manupulate the Headers to commands.
+Manipulate the Headers to commands.
 
 **Covert Channels** is ability to put commands that normal people are unable to see unless if they are Looking for it. Can be used for C2.
 
@@ -44,9 +44,9 @@ Use of IoT Devices to attack
 
 ### Data Staging
 
-* Looking for sensetive data and packaging the it exfiltrate or destroy.
+* Looking for sensitive data and packaging the it exfiltrate or destroy.
 
-## Defence against tbe Adversarial Behaviours
+## Defence against the Adversarial Behaviours
 
 * WAF
 * Whitelist and Blacklist
@@ -86,7 +86,7 @@ Indicators of Compromise are indicators which point towards a security breach.
 * **Behavioural**
     * Logical combining of the Atomic and Computed IOCs
 
-### Catagories of IOCs
+### Categories of IOCs
 
 * **Email** : Comprised of email artifacts
     * Sender's email address
@@ -110,10 +110,10 @@ Indicators of Compromise are indicators which point towards a security breach.
 
 ### Examples
 
-* Anomalies in privilage user accounts
+* Anomalies in privilege user accounts
 * Red-Flags on login activity
-* Diviant DNS requests
-* Increased Datebase Read volumes
+* Deviant DNS requests
+* Increased Database Read volumes
 * Sign of DDoS
 * More requests than usual for same types of files
 * unusual changes on Registry
@@ -140,8 +140,8 @@ Impact * probability = Risk Level
 ```
 
 * Low
-    * There is a threat but its unlikely to occure
-    * There is a threat but its Impact is neglegible
+    * There is a threat but its unlikely to occur
+    * There is a threat but its Impact is negligible
 * Medium
     * Threat is likely but not imminent
     * You have some time but its about to hit
@@ -186,7 +186,7 @@ Gathering, Processing and analysing the threat data to understand threats.
 
 ### Types of CTI
 
-* **Stratigic**: business stratigies intigrated with CTI ( Very high level ).
+* **Strategic**: business strategies integrated with CTI ( Very high level ).
 * **Operational**: CTIs related with specific attacks affecting the organisation. ( high level )
 * **Tactical**: a more specific approach to CTIs i.e. If its a malware what type of malware it is. is it a RAT,is it a Trojan, etc. ( low level )
 * **Technical**: more specific than Tactical. i.e. Hashes, Domains, etc. ( very low level )
