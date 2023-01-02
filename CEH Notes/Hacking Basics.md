@@ -196,9 +196,9 @@ Display of power or force.
 
 1. [Recon](FootPrinting%20and%20Recon.md)
    * **Passive**
-     * [Social Engineering](Social%20Engineering.md)
+     * [Social Engineering][def]
    * **Active**
-     * [Social Engineering](Social%20Engineering.md)
+     * [Social Engineering][def]
 2. Scanning
    * Find Ports and Services
    * Find Hosts
@@ -206,7 +206,9 @@ Display of power or force.
    * Find Vulnerabilities
 3. Gaining Access
    * Privilege escalation
+   * SQL, RCE,Cross site scripting etc
    * Cracking passwords
+
 4. Maintaining Access
    * Installing Malware and rootkits
 5. Covering Up tracks
@@ -229,3 +231,5 @@ Display of power or force.
 * **Technique**:- Actual Action to be taken on set guideline. E.g. Use a vulnerability scanner.
 * **Procedure**:- A more fine tuned version of Technique. E.g. use a vulnerability scanner to look for Web Vulnerabilities.
 
+
+[def]: Social%20Engineering.md
