@@ -201,4 +201,33 @@ A systematized approach to threat and security.
 
 ### Process of threat Modeling
 
-* 
+* **Identifying Security Objectives**: What needs to be secure? OR Are there any policies?
+* **Application Overview** 
+  * Roles: Who will be using
+  * Scenarios: Why using and what are normal usage.
+  * How threat actor can misuse that?
+  * What technologies are used in Application?
+    * OS
+    * Supporting apps and services
+    * Network technologies
+    * Ports and Services
+  * Are there any security mechanisms involved
+    * Authentication
+    * Authorization
+    * Access Control
+    * Input Validation
+    * Encryption
+* **Decomposing the Application**
+  * Make a diagram of Flows
+    * What are ins and outs for data
+    * what are our trust boundaries.
+    * How does data flows through system.
+* **Identifying Threats**
+  * Identify Threat Actors
+  * Identify APTs
+* **Identifying Vulnerabilities**
+  * Know ourselves
+  * Is there any convergence between Threats and Vulnerabilities.
+
+
+
