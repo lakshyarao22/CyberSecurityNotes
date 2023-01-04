@@ -201,8 +201,8 @@ A systematized approach to threat and security.
 
 ### Process of threat Modeling
 
-* **Identifying Security Objectives**: What needs to be secure? OR Are there any policies?
-* **Application Overview** 
+1. **Identifying Security Objectives**: What needs to be secure? OR Are there any policies?
+2. **Application Overview** 
   * Roles: Who will be using
   * Scenarios: Why using and what are normal usage.
   * How threat actor can misuse that?
@@ -217,17 +217,23 @@ A systematized approach to threat and security.
     * Access Control
     * Input Validation
     * Encryption
-* **Decomposing the Application**
+3. **Decomposing the Application**
   * Make a diagram of Flows
     * What are ins and outs for data
     * what are our trust boundaries.
     * How does data flows through system.
-* **Identifying Threats**
+4. **Identifying Threats**
   * Identify Threat Actors
   * Identify APTs
-* **Identifying Vulnerabilities**
+5. **Identifying Vulnerabilities**
   * Know ourselves
   * Is there any convergence between Threats and Vulnerabilities.
 
+### [Common Threat Modeling Methodology](https://www.eccouncil.org/threat-modeling/)
 
-
+* STRIDE
+* PASTA
+* TRIKE
+* VAST
+* DREAD
+* OCTAVE
