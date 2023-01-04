@@ -10,7 +10,7 @@
   
 **0day** :- Threats Unknown to OEM/Manufacturer Or Still do not have Patches.
 
-**doxing** :- releasing private info to public.
+**Doxing** :- releasing private info to public.
 
 **Bot** :- Machines which is remotely controlled.
 
@@ -70,7 +70,7 @@ These 3 things should be balanced
 
 **Threat** is something which has possibility of **exploit** against a **vulnerability**
 
-### Threat Catagories
+### Threat Categories
 
 ### Network Threats
 
@@ -149,7 +149,7 @@ Mass misinformation spreading in order to spread terror or confusion.
 
 ### Hacker Warfare
 
-* Theaft Physical or electronic
+* Theft Physical or electronic
 * Dos
 
 ### Economic Warfare
@@ -206,7 +206,8 @@ Display of power or force.
    * Find Vulnerabilities
 3. Gaining Access
    * Privilege escalation
-   * SQL, RCE,Cross site scripting etc
+<
+   * SQL Injection, Remote Code Execution, Cross site scripting, etc.
    * Cracking passwords
 
 4. Maintaining Access
@@ -229,7 +230,11 @@ Display of power or force.
 
 * **Tactics**:- A guideline for how to proceed with something. E.g. Look for Vulnerabilities in a network.
 * **Technique**:- Actual Action to be taken on set guideline. E.g. Use a vulnerability scanner.
+
 * **Procedure**:- A more fine tuned version of Technique. E.g. use a vulnerability scanner to look for Web Vulnerabilities.
 
 
-[def]: Social%20Engineering.md
+
+
+
+

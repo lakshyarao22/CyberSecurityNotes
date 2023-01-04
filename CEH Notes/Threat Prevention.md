@@ -8,9 +8,9 @@
 * Looking For Configuration
 * Pivoting and lateral Movement
 * Strange batch files
-* Strange Powershell/bash commands
+* Strange Power shell/bash commands
 
-### Powershell use
+### Power shell use
 
 Command line for windows which an attacker could use to gain access.
 
@@ -18,7 +18,7 @@ Command line for windows which an attacker could use to gain access.
 
 * Explore systems
 * Connect to External Resources.
-* Data Exfiltration
+* Data Ex-filtration
 
 ### CLI/Terminal use
 
@@ -26,7 +26,7 @@ Look for Administrative commands run by normal users
 
 ### HTTP Request Headers
 
-Manupulate the Headers to commands.
+Manipulate the Headers to commands.
 
 **Covert Channels** is ability to put commands that normal people are unable to see unless if they are Looking for it. Can be used for C2.
 
@@ -44,9 +44,9 @@ Use of IoT Devices to attack
 
 ### Data Staging
 
-* Looking for sensetive data and packaging the it exfiltrate or destroy.
+* Looking for sensitive data and packaging the it exfiltrate or destroy.
 
-## Defence against tbe Adversarial Behaviours
+## Defence against the Adversarial Behaviours
 
 * WAF
 * Whitelist and Blacklist
@@ -67,5 +67,173 @@ Assume data is system is already under attack or data breach then look for relat
 
 Make a Hypothesis that what types of attackers we have based on working of organisation. Finding vulnerabilities and TTP of potential attacker.
 
-Creating an IR before actual IR.
+Creating an IR before actual attack.
 
+## IoC
+
+Indicators of Compromise are indicators which point towards a security breach.
+
+### Types of IOCs
+
+* **Atomic** :- Self contained data
+    * IP address
+    * Email address
+
+* **Computed** :-
+    * Hash values
+    * Regex
+
+* **Behavioural**
+    * Logical combining of the Atomic and Computed IOCs
+
+### Categories of IOCs
+
+* **Email** : Comprised of email artifacts
+    * Sender's email address
+    * Subject line 
+    * Attachments
+    * Links
+
+* **Network**
+    * Domain Info
+    * IP address
+
+* Host Based
+    * File Names
+    * Hash values
+    * Registry Entries
+    * dll or drivers
+
+* Behavioural
+    * Macros running Powershell
+    * Service accounts behaving as a user would
+
+### Examples
+
+* Anomalies in privilege user accounts
+* Red-Flags on login activity
+* Deviant DNS requests
+* Increased Database Read volumes
+* Sign of DDoS
+* More requests than usual for same types of files
+* unusual changes on Registry
+* Abrupt patching
+
+## Risks
+
+Something which have a probability of negative outcome to asset
+
+```math
+
+Threats * Vulnerabilities * Impacts = Risk
+```
+
+```math
+
+Threat * Vulnerabilities * Asset Value = Risk
+```
+
+```math
+
+Impact * probability = Risk Level
+
+```
+
+* Low
+    * There is a threat but its unlikely to occur
+    * There is a threat but its Impact is negligible
+* Medium
+    * Threat is likely but not imminent
+    * You have some time but its about to hit
+    * Mitigate asap to reduce risk/Impact
+* High
+    * Take IMMEDIATE action
+    * Threat is about to hit
+
+### Risk Matrix
+
+* High is Red 🔴
+* Mid is Orange 🔶
+* Low is Green 💚
+
+| | |  | | Severity | | |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| | | Very Low | Low | Medium | High | Very High |
+| | Very High | 💚  | 🔶 | 🔴 | 🔴 | 🔴 |
+| | High | 💚 | 🔶 | 🔶 | 🔴 | 🔴 |
+|Probability | Medium | 💚 | 💚 | 🔶 | 🔶 | 🔴 |
+| | Low | 💚 | 💚 | 🔶 | 🔶 | 🔴 |
+| | Very Low | 💚 | 💚 | 💚 | 🔶 | 🔶 |
+
+## Risk Management
+
+Creating a process to reduce risk to acceptable level.
+
+### Objectives/Phases
+
+* **Identification** or **Identify**: Identification of risk and its Impact
+* **Prioritization** or **Asses**: Prioritize risks based on severity levels
+* **Mitigation** or **Treat**: Control mitigate and prevent risk
+* **Track and Review Risk**
+
+## Cyber Threat Intelligence or CTI
+
+Gathering, Processing and analysing the threat data to understand threats.
+
+* Motives
+* Targets and Goals
+* Attack Behaviours
+
+### Types of CTI
+
+* **Strategic**: business strategies integrated with CTI ( Very high level ).
+* **Operational**: CTIs related with specific attacks affecting the organisation. ( high level )
+* **Tactical**: a more specific approach to CTIs i.e. If its a malware what type of malware it is. is it a RAT,is it a Trojan, etc. ( low level )
+* **Technical**: more specific than Tactical. i.e. Hashes, Domains, etc. ( very low level )
+
+## Threat Modeling
+
+A systematized approach to threat and security.
+
+* Know the enemy
+
+* Know Us
+
+### Process of threat Modeling
+
+1. **Identifying Security Objectives**: What needs to be secure? OR Are there any policies?
+2. **Application Overview** 
+  * Roles: Who will be using
+  * Scenarios: Why using and what are normal usage.
+  * How threat actor can misuse that?
+  * What technologies are used in Application?
+    * OS
+    * Supporting apps and services
+    * Network technologies
+    * Ports and Services
+  * Are there any security mechanisms involved
+    * Authentication
+    * Authorization
+    * Access Control
+    * Input Validation
+    * Encryption
+3. **Decomposing the Application**
+  * Make a diagram of Flows
+    * What are ins and outs for data
+    * what are our trust boundaries.
+    * How does data flows through system.
+4. **Identifying Threats**
+  * Identify Threat Actors
+  * Identify APTs
+5. **Identifying Vulnerabilities**
+  * Know ourselves
+  * Is there any convergence between Threats and Vulnerabilities.
+
+### [Common Threat Modeling Methodology](https://www.eccouncil.org/threat-modeling/)
+
+* STRIDE
+* PASTA
+* TRIKE
+* VAST
+* DREAD
+* OCTAVE
