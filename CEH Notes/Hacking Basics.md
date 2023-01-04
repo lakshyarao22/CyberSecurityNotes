@@ -206,6 +206,7 @@ Display of power or force.
    * Find Vulnerabilities
 3. Gaining Access
    * Privilege escalation
+   * SQL Injection, RCE, XSS, etc.
    * Cracking passwords
 4. Maintaining Access
    * Installing Malware and rootkits
