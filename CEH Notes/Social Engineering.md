@@ -82,7 +82,7 @@ Someone who is trusted inside an organization who has inside access.
 * Difficult to detect
 * Could be part of the job
 
-### Types
+### Types of Insider threats
 
 * Terminated Employee
 * Disgruntled Employee
@@ -110,7 +110,7 @@ Someone who is trusted inside an organization who has inside access.
 
 Hacker steals personally identified information and impersonates you.
 
-### Motives
+### Motives of identity threat
 
 * Money
 * Framing for Crime
