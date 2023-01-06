@@ -14,7 +14,7 @@
 
 Command line for windows which an attacker could use to gain access.
 
-**[Living of the land](https://youtu.be/QBvM-MzQ570)** is a process in which we make use of whats available to us and not install anything.
+**[Living of the land](https://youtu.be/QBvM-MzQ570)** is a process in which we make use of whats available to us on machine and not install anything.
 
 * Explore systems
 * Connect to External Resources.
@@ -56,7 +56,6 @@ Use of IoT Devices to attack
 * Monitor DNS and look for spikes in DNS traffic
 * File logging and DLP
 
-
 ## Threat Hunting concepts
 
 ### Define
@@ -76,37 +75,37 @@ Indicators of Compromise are indicators which point towards a security breach.
 ### Types of IOCs
 
 * **Atomic** :- Self contained data
-    * IP address
-    * Email address
+  * IP address
+  * Email address
 
 * **Computed** :-
-    * Hash values
-    * Regex
+  * Hash values
+  * Regex
 
 * **Behavioural**
-    * Logical combining of the Atomic and Computed IOCs
+  * Logical combining of the Atomic and Computed IOCs
 
 ### Categories of IOCs
 
 * **Email** : Comprised of email artifacts
-    * Sender's email address
-    * Subject line 
-    * Attachments
-    * Links
+  * Sender's email address
+  * Subject line
+  * Attachments
+  * Links
 
 * **Network**
-    * Domain Info
-    * IP address
+  * Domain Info
+  * IP address
 
 * Host Based
-    * File Names
-    * Hash values
-    * Registry Entries
-    * dll or drivers
+  * File Names
+  * Hash values
+  * Registry Entries
+  * dll or drivers
 
 * Behavioural
-    * Macros running Powershell
-    * Service accounts behaving as a user would
+  * Macros running Powershell
+  * Service accounts behaving as a user would
 
 ### Examples
 
@@ -123,32 +122,22 @@ Indicators of Compromise are indicators which point towards a security breach.
 
 Something which have a probability of negative outcome to asset
 
-```math
+$$ Threats*Vulnerabilities*Impacts = Risk $$
 
-Threats * Vulnerabilities * Impacts = Risk
-```
+$$ Threat*Vulnerabilities*Asset Value = Risk $$
 
-```math
-
-Threat * Vulnerabilities * Asset Value = Risk
-```
-
-```math
-
-Impact * probability = Risk Level
-
-```
+$$ Impact * probability = Risk Level $$
 
 * Low
-    * There is a threat but its unlikely to occur
-    * There is a threat but its Impact is negligible
+  * There is a threat but its unlikely to occur
+  * There is a threat but its Impact is negligible
 * Medium
-    * Threat is likely but not imminent
-    * You have some time but its about to hit
-    * Mitigate asap to reduce risk/Impact
+  * Threat is likely but not imminent
+  * You have some time but its about to hit
+  * Mitigate asap to reduce risk/Impact
 * High
-    * Take IMMEDIATE action
-    * Threat is about to hit
+  * Take IMMEDIATE action
+  * Threat is about to hit
 
 ### Risk Matrix
 
@@ -188,7 +177,7 @@ Gathering, Processing and analysing the threat data to understand threats.
 
 * **Strategic**: business strategies integrated with CTI ( Very high level ).
 * **Operational**: CTIs related with specific attacks affecting the organisation. ( high level )
-* **Tactical**: a more specific approach to CTIs i.e. If its a malware what type of malware it is. is it a RAT,is it a Trojan, etc. ( low level )
+* **Tactical**: a more specific approach to CTIs i.e. If its a malware what type of malware it is. is it a RAT, is it a Trojan, etc. ( low level )
 * **Technical**: more specific than Tactical. i.e. Hashes, Domains, etc. ( very low level )
 
 ## Threat Modeling
@@ -196,38 +185,45 @@ Gathering, Processing and analysing the threat data to understand threats.
 A systematized approach to threat and security.
 
 * Know the enemy
-
 * Know Us
 
 ### Process of threat Modeling
 
 1. **Identifying Security Objectives**: What needs to be secure? OR Are there any policies?
-2. **Application Overview** 
-  * Roles: Who will be using
-  * Scenarios: Why using and what are normal usage.
-  * How threat actor can misuse that?
-  * What technologies are used in Application?
-    * OS
-    * Supporting apps and services
-    * Network technologies
-    * Ports and Services
-  * Are there any security mechanisms involved
-    * Authentication
-    * Authorization
-    * Access Control
-    * Input Validation
-    * Encryption
+
+2. **Application Overview**
+
+* Roles: Who will be using
+* Scenarios: Why using and what are normal usage.
+* How threat actor can misuse that?
+* What technologies are used in Application?
+  * OS
+  * Supporting apps and services
+  * Network technologies
+  * Ports and Services
+* Are there any security mechanisms involved
+  * Authentication
+  * Authorization
+  * Access Control
+  * Input Validation
+  * Encryption
+
 3. **Decomposing the Application**
-  * Make a diagram of Flows
-    * What are ins and outs for data
-    * what are our trust boundaries.
-    * How does data flows through system.
+
+* Make a diagram of Flows
+  * What are ins and outs for data
+  * what are our trust boundaries.
+  * How does data flows through system.
+
 4. **Identifying Threats**
-  * Identify Threat Actors
-  * Identify APTs
+
+* Identify Threat Actors
+* Identify APTs
+
 5. **Identifying Vulnerabilities**
-  * Know ourselves
-  * Is there any convergence between Threats and Vulnerabilities.
+
+* Know ourselves
+* Is there any convergence between Threats and Vulnerabilities.
 
 ### [Common Threat Modeling Methodology](https://www.eccouncil.org/threat-modeling/)
 
@@ -250,7 +246,7 @@ Machine Learning is the ability to learn.
 * **Supervised Data**: Labeled Dataset used for Learning or allowing a machine to learn.
 * **Unsupervised Data**: Unlabeled data on which machine actually run its Intelligence and determine what is what
 
-### Ml and AI are Solving ability to:
+### Ml and AI are Solving ability to
 
 * Classify and Categorize the data
 * Automate intelligent monotonous Tasks
@@ -270,10 +266,8 @@ Machine Learning is the ability to learn.
 * Network Security
 * AI vs AI
 
-
 ## Standards and Regulations
 
-* [**PCI-DSS**](https://www.pcisecuritystandards.org/document_library/)
+* [PCI-DSS](https://www.pcisecuritystandards.org/document_library/)
 * [ISO-27001](https://www.iso.org/isoiec-27001-information-security.html)
 * [HIPPA](https://www.cdc.gov/phlp/publications/topic/hipaa.html)
-
