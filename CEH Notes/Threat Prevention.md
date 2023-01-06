@@ -237,3 +237,43 @@ A systematized approach to threat and security.
 * VAST
 * DREAD
 * OCTAVE
+
+## AI and ML in Cyber Security
+
+AI is a ability's of a machine, computer or program to mimic Human Intelligence.
+
+* Problem Solving
+* Decision Making
+
+Machine Learning is the ability to learn.
+
+* **Supervised Data**: Labeled Dataset used for Learning or allowing a machine to learn.
+* **Unsupervised Data**: Unlabeled data on which machine actually run its Intelligence and determine what is what
+
+### Ml and AI are Solving ability to:
+
+* Classify and Categorize the data
+* Automate intelligent monotonous Tasks
+* Prediction
+* Labeling unlabeled data based on its Analysis
+* Finding Patterns in unlabeled Dataset
+* Grouping data in manageable size
+
+### Cyber Security Applications
+
+* Abnormality detection
+* Authentication
+* Detect Phishing
+* Threat detection
+* Vulnerabilities Assessment
+* Behavioural Analysis
+* Network Security
+* AI vs AI
+
+
+## Standards and Regulations
+
+* [**PCI-DSS**](https://www.pcisecuritystandards.org/document_library/)
+* [ISO-27001](https://www.iso.org/isoiec-27001-information-security.html)
+* [HIPPA](https://www.cdc.gov/phlp/publications/topic/hipaa.html)
+
