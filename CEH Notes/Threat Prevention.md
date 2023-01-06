@@ -145,14 +145,14 @@ $$ Impact * probability = Risk Level $$
 * Mid is Orange 🔶
 * Low is Green 💚
 
-| | |  | | Severity | | |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| | | Very Low | Low | Medium | High | Very High |
-| | Very High | 💚  | 🔶 | 🔴 | 🔴 | 🔴 |
-| | High | 💚 | 🔶 | 🔶 | 🔴 | 🔴 |
-|Probability | Medium | 💚 | 💚 | 🔶 | 🔶 | 🔴 |
-| | Low | 💚 | 💚 | 🔶 | 🔶 | 🔴 |
-| | Very Low | 💚 | 💚 | 💚 | 🔶 | 🔶 |
+|||||Severity|||
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|||Very Low|Low|Medium|High|Very High|
+||Very High|💚|🔶|🔴|🔴|🔴|
+||High|💚|🔶|🔶|🔴|🔴|
+|Probability |Medium|💚|💚|🔶|🔶|🔴|
+||Low|💚|💚|🔶|🔶|🔴|
+||Very Low|💚|💚|💚|🔶|🔶|
 
 ## Risk Management
 
