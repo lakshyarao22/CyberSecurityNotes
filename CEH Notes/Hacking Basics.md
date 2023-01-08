@@ -93,6 +93,23 @@ These 3 things should be balanced
   
 **APT** :- Advanced Persistent Threats. Threats which are pre planned to attack and a organisation and are persistent i.e. being in organisation for a very long time.
 
+## [Cyber kill chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
+
+1. **Reconnaissance**:- Research, identification, and selection of targets.
+2. **Weaponization**:- Pairing remote access malware with exploit into a deliverable payload (e.g., Adobe PDF and Microsoft Office files).
+3. **Delivery**:- Transmission of weapon to target (e.g., via email attachments, websites, or USB drives).
+4. **Exploitation**:- Once delivered, the weapon’s code is triggered, exploiting vulnerable applications or systems.
+5. **Installation**:- The weapon installs a backdoor on a target’s system, allowing persistent access.
+6. **Command and Control**:- Outside server communicates with the weapons providing “hands-on keyboard access” inside the target’s network(Pass the data back & forth by using reverse TCP).
+7. **Action and Objective**:- The attacker works to achieve the objective of the intrusion, which can include exfiltration or destruction of data, or intrusion of another target
+
+## TTP
+
+* **Tactics**:- A guideline for how to proceed with something. E.g. Look for Vulnerabilities in a network.
+* **Technique**:- Actual Action to be taken on set guideline. E.g. Use a vulnerability scanner.
+
+* **Procedure**:- A more fine tuned version of Technique. E.g. use a vulnerability scanner to look for Web Vulnerabilities.
+
 ## Types Of Attacks
 
 ### Passive Attack
@@ -175,6 +192,9 @@ Display of power or force.
 
 ### Defensive
 
+* [Threat Prevention](Threat%20Prevention.md)
+* [Incident Management](Incident%20Management.md)
+
 ### Offensive
 
 * Annoyance e.g. Honeypots
@@ -194,7 +214,7 @@ Display of power or force.
   
 ## Hacking Phases
 
-1. [Recon](FootPrinting%20and%20Recon.md)
+1. [Footprinting and Recon](FootPrinting%20and%20Recon.md)
    * **Passive**
      * [Social Engineering](Social%20Engineering.md)
    * **Active**
@@ -215,20 +235,3 @@ Display of power or force.
 5. Covering Up tracks
    * Modifying logs
    * Hiding malware
-
-## [Cyber kill chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
-
-1. **Reconnaissance**:- Research, identification, and selection of targets.
-2. **Weaponization**:- Pairing remote access malware with exploit into a deliverable payload (e.g., Adobe PDF and Microsoft Office files).
-3. **Delivery**:- Transmission of weapon to target (e.g., via email attachments, websites, or USB drives).
-4. **Exploitation**:- Once delivered, the weapon’s code is triggered, exploiting vulnerable applications or systems.
-5. **Installation**:- The weapon installs a backdoor on a target’s system, allowing persistent access.
-6. **Command and Control**:- Outside server communicates with the weapons providing “hands-on keyboard access” inside the target’s network(Pass the data back & forth by using reverse TCP).
-7. **Action and Objective**:- The attacker works to achieve the objective of the intrusion, which can include exfiltration or destruction of data, or intrusion of another target
-
-## TTP
-
-* **Tactics**:- A guideline for how to proceed with something. E.g. Look for Vulnerabilities in a network.
-* **Technique**:- Actual Action to be taken on set guideline. E.g. Use a vulnerability scanner.
-
-* **Procedure**:- A more fine tuned version of Technique. E.g. use a vulnerability scanner to look for Web Vulnerabilities.
