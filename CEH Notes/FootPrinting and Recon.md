@@ -92,3 +92,9 @@ Job postings can be used to determine the technologies of a organization.
 * [Hidden WiKi](https://thehiddenwiki.org/)
 
 ## Metadata Recon
+
+Metadate is **Data** about **Data**
+
+### Tools to gather metadata
+
+* [Metagoofil](https://www.kali.org/tools/metagoofil/) is a tool to automate the process of gathering the metadata.
