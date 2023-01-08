@@ -45,7 +45,7 @@ docs.google.com
   |__Sub Domain
 ```
 
-### Tools
+### Tools for Subdomain Enumeration
 
 * [Netcraft](https://www.netcraft.com/tools/)
 * [Sublist3r](https://github.com/aboul3la/Sublist3r) for subdomain enumeration
@@ -97,4 +97,25 @@ Metadate is **Data** about **Data**
 
 ### Tools to gather metadata
 
-* [Metagoofil](https://www.kali.org/tools/metagoofil/) is a tool to automate the process of gathering the metadata.
+#### [Metagoofil](https://www.kali.org/tools/metagoofil/)
+
+It is a tool to automate the process of gathering the metadata.
+It scavages google to get all the filetypes mentioned.
+
+```bash
+metagoofil -d itpro.tv -e 200 -t pdf,doc,txt
+   ^            ^          ^      ^
+Program      Website     Delay  Filetypes
+```
+
+#### [Exiftool](https://exiftool.org/)
+
+A tool which extract all the metadata from a file.
+
+#### [Exifdata](https://exifdata.com/)
+
+An Online Exiftool Alternative.
+
+#### [Strings](https://en.wikipedia.org/wiki/Strings_(Unix))
+
+Similar tool like Exiftool built into Linux.
