@@ -119,3 +119,55 @@ An Online Exiftool Alternative.
 #### [Strings](https://en.wikipedia.org/wiki/Strings_(Unix))
 
 Similar tool like Exiftool built into Linux.
+
+## WordLists
+
+A List of words, One word per line.
+
+### Most Common Wordlists
+
+* [SecList](https://github.com/danielmiessler/SecLists)
+* [rockyou](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjQxpu5xbj8AhWXyzgGHaD3DoEQFnoECBMQAQ&url=https%3A%2F%2Fgithub.com%2Fbrannondorsey%2Fnaive-hashcat%2Freleases%2Fdownload%2Fdata%2Frockyou.txt&usg=AOvVaw3snAERl1mU6Ccr4WFEazBd)
+
+### Custom Wordlists
+
+* [Cewl](https://www.kali.org/tools/cewl/)
+This program makes custom wordlist based on a website you give to it.
+
+```bash
+cewl -m 6 -o -w wordlist.txt itprotv
+        ^          ^           ^
+     min words   outputTo    Website
+```
+
+## Email Tracking
+
+Info gathred with email tracking.
+
+* Proxy use
+* IP Address
+* Geo Location
+* How long it took to read email
+* Where links clicked
+* OS Type
+* Browser Type
+* Host device type
+
+Uses a 1x1 image block embedded inside mail coded with a program
+
+### Tools used for email tracking
+
+* [Infoga](https://github.com/m4ll0k/Infoga)
+* [Bitly](https://bitly.com/)
+* [Linkly](https://linklyhq.com/)
+
+## [WhoIs](https://www.whois.com/) and DNS Recon
+
+* Thick WhoIs: All Info
+* Thin WhoIs: Faster
+
+### DNS Tools
+
+* [nslookup](https://www.kali.org/tools/bind9/#nslookuphttps://linux.die.net/man/1/nslookup)
+* [dig](https://www.kali.org/tools/bind9/#dig)
+* [dnsrecon](https://www.kali.org/tools/bind9/#dnsrecon)
