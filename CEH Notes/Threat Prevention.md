@@ -193,37 +193,37 @@ A systematized approach to threat and security.
 
 2. **Application Overview**
 
-* Roles: Who will be using
-* Scenarios: Why using and what are normal usage.
-* How threat actor can misuse that?
-* What technologies are used in Application?
-  * OS
-  * Supporting apps and services
-  * Network technologies
-  * Ports and Services
-* Are there any security mechanisms involved
-  * Authentication
-  * Authorization
-  * Access Control
-  * Input Validation
-  * Encryption
+    * Roles: Who will be using
+    * Scenarios: Why using and what are normal usage.
+    * How threat actor can misuse that?
+    * What technologies are used in Application?
+      * OS
+      * Supporting apps and services
+      * Network technologies
+      * Ports and Services
+    * Are there any security mechanisms involved
+      * Authentication
+      * Authorization
+      * Access Control
+      * Input Validation
+      * Encryption
 
 3. **Decomposing the Application**
 
-* Make a diagram of Flows
-  * What are ins and outs for data
-  * what are our trust boundaries.
-  * How does data flows through system.
+    * Make a diagram of Flows
+      * What are ins and outs for data
+      * what are our trust boundaries.
+      * How does data flows through system.
 
 4. **Identifying Threats**
 
-* Identify Threat Actors
-* Identify APTs
+    * Identify Threat Actors
+    * Identify APTs
 
 5. **Identifying Vulnerabilities**
 
-* Know ourselves
-* Is there any convergence between Threats and Vulnerabilities.
+    * Know ourselves
+    * Is there any convergence between Threats and Vulnerabilities.
 
 ### [Common Threat Modeling Methodology](https://www.eccouncil.org/threat-modeling/)
 
@@ -269,5 +269,10 @@ Machine Learning is the ability to learn.
 ## Standards and Regulations
 
 * [PCI-DSS](https://www.pcisecuritystandards.org/document_library/)
-* [ISO-27001](https://www.iso.org/isoiec-27001-information-security.html)
-* [HIPPA](https://www.cdc.gov/phlp/publications/topic/hipaa.html)
+* [ISO-IEC-27001](https://www.iso.org/isoiec-27001-information-security.html)
+* [HIPPA](https://www.hhs.gov/hipaa/for-professionals/index.html)
+* [Sarbanes Oxley Act](https://sarbanes-oxley-act.com/)
+* [DMCA - Digital Millennium Copyright Act](https://www.dmca.com/FAQ/What-is-DMCA)
+* [FISMA - FEDERAL INFORMATION SECURITY MODERNIZATION ACT](https://www.cisa.gov/federal-information-security-modernization-act)
+* [GDPR](https://www.gdpreu.org/)
+* [DPA](https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted)
