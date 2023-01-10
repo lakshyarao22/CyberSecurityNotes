@@ -4,7 +4,7 @@
 
 **Passive** :- Without Direct Interaction
 
-## What can be stealed?
+## What can be stolen?
 
 * System Information
 * Username and passwords
@@ -73,24 +73,6 @@ Job postings can be used to determine the technologies of a organization.
 * [Monster.com](https://www.monster.com/)
 * [LinkedIn](https://www.linkedin.com/jobs/)
 
-## Protection Against Recon
-
-* Find wrong and make policy and procedure
-* Training and Awareness
-* [Who.is](https://who.is/) privacy services
-* [Encryption](https://www.techtarget.com/searchsecurity/definition/encryption#:~:text=Encryption%20is%20the%20method%20by,encrypted%20data%20is%20called%20ciphertext.)
-* Be paranoid on social Media
-* Disable location services
-* Sanitize job listings
-
-### Tools To Protect Against Recon
-
-* [Freenet](https://freenetproject.org/index.html)
-* [RetroShare](https://retroshare.cc/)
-* [Tor Browser](https://www.torproject.org/download/)
-* [Tails OS](https://tails.boum.org/)
-* [Hidden WiKi](https://thehiddenwiki.org/)
-
 ## Metadata Recon
 
 Metadate is **Data** about **Data**
@@ -99,8 +81,7 @@ Metadate is **Data** about **Data**
 
 #### [Metagoofil](https://www.kali.org/tools/metagoofil/)
 
-It is a tool to automate the process of gathering the metadata.
-It scavages google to get all the filetypes mentioned.
+It is a tool to automate the process of gathering files from a website.
 
 ```bash
 metagoofil -d itpro.tv -e 200 -t pdf,doc,txt
@@ -142,7 +123,7 @@ cewl -m 6 -o -w wordlist.txt itprotv
 
 ## Email Tracking
 
-Info gathred with email tracking.
+Info gathered with email tracking.
 
 * Proxy use
 * IP Address
@@ -171,3 +152,22 @@ Uses a 1x1 image block embedded inside mail coded with a program
 * [nslookup](https://www.kali.org/tools/bind9/#nslookuphttps://linux.die.net/man/1/nslookup)
 * [dig](https://www.kali.org/tools/bind9/#dig)
 * [dnsrecon](https://www.kali.org/tools/bind9/#dnsrecon)
+
+## Protection Against Recon
+
+* Find wrong and make policy and procedure
+* Training and Awareness
+* [Who.is](https://who.is/) privacy services
+* [Encryption](https://www.techtarget.com/searchsecurity/definition/encryption#:~:text=Encryption%20is%20the%20method%20by,encrypted%20data%20is%20called%20ciphertext.)
+* Be paranoid on social Media
+* Disable location services
+* Sanitize job listings
+
+### Tools To Protect Against Recon
+
+* [Freenet](https://freenetproject.org/index.html)
+* [RetroShare](https://retroshare.cc/)
+* [Tor Browser](https://www.torproject.org/download/)
+* [Tails OS](https://tails.boum.org/)
+* [Hidden WiKi](https://thehiddenwiki.org/)
+

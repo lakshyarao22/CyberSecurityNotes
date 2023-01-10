@@ -1,5 +1,36 @@
 # NMAP Scans
 
+## TCP Connect Scan
+
+### Pros
+
+* More Common
+* Utilize TCP 3-way handshake.
+* Starts with a SYN packet.
+* Sends a SYN-ACK packet back.
+* Host send back an acknowledgement packet.
+* Connection oriented.
+* Don't need admin privileges.
+
+```console
+nmap -sT 10.10.10.16
+```
+
+### Cons
+
+* Prone to detection
+* Slow
+* More prone to crash services
+
+## Stealth Scans
+
+### Pros
+
+* Default scan of nmap
+* Never completes the TCP 3-way handshake
+* Flies under the radar
+
+
 ## IDLE/IPID Scan
 
 It is an indirect scan in which an intermediate host(ZOMBIE) is used to scan a target.
